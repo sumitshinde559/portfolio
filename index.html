@@ -1,186 +1,460 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sumit Shinde | Developer Portfolio</title>
-<script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Shinde | Web & CRM Systems Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(96, 165, 254, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #60a5fa;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(37, 99, 235, 0.15);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
 </head>
 
-<body class="bg-[#0b0f19] text-gray-200 font-sans">
+<body class="bg-[#030712] text-gray-200 selection:bg-blue-500/30 overflow-x-hidden">
 
-<!-- NAVBAR -->
-<nav class="fixed w-full backdrop-blur-md bg-[#0b0f19]/70 border-b border-gray-800 z-50">
-  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-    <h1 class="font-bold text-lg">Sumit Shinde</h1>
-    <div class="space-x-6 text-sm">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
+    <!-- Background Blobs -->
+    <div class="blob top-[-100px] left-[-100px]"></div>
+    <div class="blob bottom-[-100px] right-[-100px]"></div>
 
-<!-- HERO -->
-<section class="min-h-screen flex items-center justify-center px-6">
-  <div class="max-w-4xl text-center bg-white/5 backdrop-blur-xl p-10 rounded-2xl border border-white/10 shadow-xl">
-    <h2 class="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-      Developer • API Integrations • Marketing Cloud
-    </h2>
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 transition-all duration-300 border-b border-white/5 bg-[#030712]/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold">S</div>
+                <h1 class="font-bold text-xl tracking-tight hidden sm:block text-white">Sumit Shinde</h1>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="#about" class="nav-link hover:text-white transition">About</a>
+                <a href="#skills" class="nav-link hover:text-white transition">Skills</a>
+                <a href="#projects" class="nav-link hover:text-white transition">Projects</a>
+                <a href="#experience" class="nav-link hover:text-white transition">Experience</a>
+                <a href="#contact" class="nav-link hover:text-white transition">Contact</a>
+            </div>
 
-    <p class="text-gray-400 max-w-2xl mx-auto">
-      Junior Software Engineer specialising in cloud-hosted web apps, REST APIs,
-      CRM integrations, and marketing automation platforms.
-    </p>
+            <a href="mailto:sumitshinde559@gmail.com" class="px-5 py-2 rounded-full bg-white text-black text-sm font-bold hover:bg-blue-500 hover:text-white transition-all">
+                Hire Me
+            </a>
+        </div>
+    </nav>
 
-    <div class="mt-8 flex justify-center gap-4">
-      <a href="mailto:sumitshinde559@gmail.com"
-         class="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition">
-         Contact Me
-      </a>
-      <a href="https://www.linkedin.com/in/sumitshinde/"
-         target="_blank"
-         class="px-6 py-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition">
-         LinkedIn
-      </a>
-    </div>
-  </div>
-</section>
+    <!-- HERO -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 pt-20">
+        <div class="max-w-4xl text-center">
+            <span class="px-4 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6 inline-block">
+                Based in Melbourne, Australia
+            </span>
+            
+            <h2 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white">
+                Web Developer & <br>
+                <span class="gradient-text">CRM Systems Specialist</span>
+            </h2>
 
-<!-- ABOUT -->
-<section id="about" class="max-w-6xl mx-auto px-6 py-20">
-  <h3 class="text-3xl font-semibold mb-6">About Me</h3>
-  <p class="text-gray-400 leading-relaxed">
-    Software developer with strong experience building HTML, CSS, JavaScript and PHP
-    applications with backend integrations. Skilled in API workflows, automation logic,
-    debugging cloud-hosted systems, and collaborating within agile environments.
-  </p>
-</section>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
+                Bridging the gap between front-end aesthetics and backend logic. I specialize in WordPress, CRM automations, and complex API integrations.
+            </p>
 
-<!-- SKILLS -->
-<section id="skills" class="bg-[#0f1423] py-20 px-6">
-<div class="max-w-6xl mx-auto">
-<h3 class="text-3xl font-semibold mb-10">Tech Stack</h3>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#projects" class="px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all shadow-lg shadow-blue-600/20">
+                    View My Work
+                </a>
+                <a href="https://www.linkedin.com/in/sumitshinde/" target="_blank" class="px-8 py-4 rounded-xl glass hover:bg-white/10 text-white font-bold transition-all flex items-center justify-center gap-2">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+        
+        <div class="mt-20 animate-bounce text-gray-600">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
 
-<div class="grid md:grid-cols-4 gap-6 text-sm">
+    <!-- ABOUT -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-32">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-sm font-bold text-blue-500 uppercase tracking-widest mb-2">Introduction</h3>
+                <h2 class="text-4xl font-bold mb-6 text-white">Solving business problems with code.</h2>
+                <div class="space-y-4 text-gray-400 text-lg leading-relaxed">
+                    <p>
+                        I am a Software Developer with extensive experience in building robust web applications across PHP, JavaScript, and modern frameworks. My expertise lies in creating seamless connections between websites and business systems.
+                    </p>
+                    <p>
+                        Whether it's optimizing WordPress environments, building API-driven automation pipelines for Zoho or Eloqua, or managing cloud-hosted infrastructure, I focus on performance, reliability, and user experience.
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="glass p-8 rounded-3xl text-center">
+                    <div class="text-4xl font-bold text-white mb-2">3+</div>
+                    <div class="text-gray-500 text-sm">Years Experience</div>
+                </div>
+                <div class="glass p-8 rounded-3xl text-center mt-8">
+                    <div class="text-4xl font-bold text-white mb-2">10+</div>
+                    <div class="text-gray-500 text-sm">Integrations Built</div>
+                </div>
+                <div class="glass p-8 rounded-3xl text-center">
+                    <div class="text-4xl font-bold text-white mb-2">5+</div>
+                    <div class="text-gray-500 text-sm">Major Projects</div>
+                </div>
+                <div class="glass p-8 rounded-3xl text-center mt-8">
+                    <div class="text-4xl font-bold text-white mb-2">100%</div>
+                    <div class="text-gray-500 text-sm">Melbourne Based</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="bg-white/5 p-6 rounded-xl border border-white/10">
-<h4 class="font-bold mb-2">Languages</h4>
-<p>HTML • CSS • JavaScript • PHP</p>
-</div>
+    <!-- SKILLS -->
+    <section id="skills" class="bg-white/[0.02] py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-sm font-bold text-blue-500 uppercase tracking-widest mb-2">Capabilities</h3>
+                <h2 class="text-4xl font-bold text-white">My Tech Stack</h2>
+            </div>
 
-<div class="bg-white/5 p-6 rounded-xl border border-white/10">
-<h4 class="font-bold mb-2">Frameworks</h4>
-<p>Bootstrap • Angular • PHP Yii</p>
-</div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Languages -->
+                <div class="glass p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-orange-500/20 text-orange-500 rounded-lg flex items-center justify-center mb-6 text-xl">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-4 text-white">Languages</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>HTML5 / CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>PHP (Yii, Laravel)</li>
+                        <li>MySQL / PostgreSQL</li>
+                    </ul>
+                </div>
 
-<div class="bg-white/5 p-6 rounded-xl border border-white/10">
-<h4 class="font-bold mb-2">Platforms</h4>
-<p>AWS • Eloqua • Zoho CRM</p>
-</div>
+                <!-- Frameworks -->
+                <div class="glass p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-blue-500/20 text-blue-500 rounded-lg flex items-center justify-center mb-6 text-xl">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-4 text-white">Frameworks</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>WordPress (Advanced)</li>
+                        <li>Angular</li>
+                        <li>Bootstrap / Tailwind</li>
+                        <li>React (Learning)</li>
+                    </ul>
+                </div>
 
-<div class="bg-white/5 p-6 rounded-xl border border-white/10">
-<h4 class="font-bold mb-2">Tools</h4>
-<p>Git • Jira • MySQL • REST APIs</p>
-</div>
+                <!-- CRM & Systems -->
+                <div class="glass p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-purple-500/20 text-purple-500 rounded-lg flex items-center justify-center mb-6 text-xl">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-4 text-white">CRM & Integrations</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Zoho CRM / Forms</li>
+                        <li>Oracle Eloqua</li>
+                        <li>REST API Development</li>
+                        <li>Zapier / Automation</li>
+                    </ul>
+                </div>
 
-</div>
-</div>
-</section>
+                <!-- DevOps -->
+                <div class="glass p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-green-500/20 text-green-500 rounded-lg flex items-center justify-center mb-6 text-xl">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-4 text-white">Tools & Cloud</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>AWS / Cloud Hosting</li>
+                        <li>Git / Version Control</li>
+                        <li>Jira (Agile/Scrum)</li>
+                        <li>LMS Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- EXPERIENCE TIMELINE -->
-<section id="experience" class="max-w-5xl mx-auto py-20 px-6">
-<h3 class="text-3xl font-semibold mb-10">Experience</h3>
+    <!-- LIVE PROJECTS -->
+    <section id="projects" class="max-w-6xl mx-auto py-32 px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div>
+                <h3 class="text-sm font-bold text-blue-500 uppercase tracking-widest mb-2">Live Work</h3>
+                <h2 class="text-4xl font-bold text-white">Featured Projects</h2>
+                <p class="text-gray-400 mt-4 max-w-lg">
+                    A selection of enterprise websites and systems where I contributed through development, optimization, and ongoing maintenance.
+                </p>
+            </div>
+        </div>
 
-<div class="relative border-l border-gray-700 space-y-10 pl-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="project-card glass rounded-2xl overflow-hidden flex flex-col">
+                <div class="h-48 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center p-6 border-b border-white/5">
+                   <div class="text-white font-bold text-xl">NIMS Institute</div>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="flex gap-2 mb-3">
+                        <span class="text-[10px] bg-blue-500/20 text-blue-400 px-2 py-1 rounded font-bold uppercase">Development</span>
+                        <span class="text-[10px] bg-green-500/20 text-green-400 px-2 py-1 rounded font-bold uppercase">Optimization</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">NIMS Institute</h4>
+                    <p class="text-gray-400 text-sm mb-6">Education sector portal development focusing on LMS integration and responsive design.</p>
+                    <a href="https://nimsinstitute.edu.au" target="_blank" class="mt-auto flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition group">
+                        Visit Website <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+            </div>
 
-<div>
-<h4 class="font-bold text-lg">Developer Programmer — Ameya Informatics</h4>
-<p class="text-gray-500 text-sm">Sep 2024 – Present</p>
-<p class="text-gray-400 mt-2">
-Built WordPress integrations, Zoho CRM automation pipelines,
-and resolved API/data synchronisation issues.
-</p>
-</div>
+            <!-- Project 2 -->
+            <div class="project-card glass rounded-2xl overflow-hidden flex flex-col">
+                <div class="h-48 bg-gradient-to-br from-indigo-900 to-gray-900 flex items-center justify-center p-6 border-b border-white/5">
+                   <div class="text-white font-bold text-xl">AIM Institute</div>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="flex gap-2 mb-3">
+                        <span class="text-[10px] bg-blue-500/20 text-blue-400 px-2 py-1 rounded font-bold uppercase">Maintenance</span>
+                        <span class="text-[10px] bg-purple-500/20 text-purple-400 px-2 py-1 rounded font-bold uppercase">Systems</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">AIM Institute</h4>
+                    <p class="text-gray-400 text-sm mb-6">System administration and web development for health and science education platforms.</p>
+                    <a href="https://aiminstitute.edu.au" target="_blank" class="mt-auto flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition group">
+                        Visit Website <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+            </div>
 
-<div>
-<h4 class="font-bold text-lg">Marketing Cloud Web Developer — Marketing Cube</h4>
-<p class="text-gray-500 text-sm">Jan 2022 – May 2023</p>
-<p class="text-gray-400 mt-2">
-Developed dynamic emails, landing pages, segmentation logic
-and CRM integrations with Eloqua.
-</p>
-</div>
+            <!-- Project 3 -->
+            <div class="project-card glass rounded-2xl overflow-hidden flex flex-col">
+                <div class="h-48 bg-gradient-to-br from-blue-900 to-black flex items-center justify-center p-6 border-b border-white/5">
+                   <div class="text-white font-bold text-xl italic">ACT Cabs</div>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="flex gap-2 mb-3">
+                        <span class="text-[10px] bg-blue-500/20 text-blue-400 px-2 py-1 rounded font-bold uppercase">WordPress</span>
+                        <span class="text-[10px] bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded font-bold uppercase">API</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">ACT Cabs Canberra</h4>
+                    <p class="text-gray-400 text-sm mb-6">Commercial taxi service website development and integration of booking APIs.</p>
+                    <a href="https://actcabs.com.au" target="_blank" class="mt-auto flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition group">
+                        Visit Website <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+            </div>
 
-<div>
-<h4 class="font-bold text-lg">Systems Administrator / Web Developer - Aim Institute of Health & Sciences</h4>
-<p class="text-gray-500 text-sm">Jan 2021 – Jun 2021</p>
-<p class="text-gray-400 mt-2">
-Maintained LMS systems, authentication flows and deployments.
-</p>
-</div>
+            <!-- Project 4 -->
+            <div class="project-card glass rounded-2xl overflow-hidden flex flex-col">
+                <div class="h-48 bg-gradient-to-br from-red-900 to-gray-900 flex items-center justify-center p-6 border-b border-white/5">
+                   <div class="text-white font-bold text-xl italic underline">ANCC</div>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="flex gap-2 mb-3">
+                        <span class="text-[10px] bg-green-500/20 text-green-400 px-2 py-1 rounded font-bold uppercase">Enterprise</span>
+                        <span class="text-[10px] bg-red-500/20 text-red-400 px-2 py-1 rounded font-bold uppercase">Security</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">ANCC Check</h4>
+                    <p class="text-gray-400 text-sm mb-6">Web optimization and system maintenance for a national character check platform.</p>
+                    <a href="https://www.australiannationalcharactercheck.com.au" target="_blank" class="mt-auto flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition group">
+                        Visit Website <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+            </div>
 
-</div>
-</section>
+            <!-- Project 5 -->
+            <div class="project-card glass rounded-2xl overflow-hidden flex flex-col">
+                <div class="h-48 bg-gradient-to-br from-gray-700 to-blue-900 flex items-center justify-center p-6 border-b border-white/5">
+                   <div class="text-white font-bold text-xl uppercase tracking-widest">Portal</div>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="flex gap-2 mb-3">
+                        <span class="text-[10px] bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded font-bold uppercase">CRM Portal</span>
+                        <span class="text-[10px] bg-orange-500/20 text-orange-400 px-2 py-1 rounded font-bold uppercase">User Auth</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">ACT Cabs Portal</h4>
+                    <p class="text-gray-400 text-sm mb-6">Developing specialized user portals for cab management and reporting systems.</p>
+                    <a href="https://portalactcabs.com.au" target="_blank" class="mt-auto flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition group">
+                        Visit Website <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 6 (Automation Placeholder) -->
+             <div class="project-card border-2 border-dashed border-white/10 rounded-2xl overflow-hidden flex flex-col items-center justify-center p-8 text-center bg-transparent">
+                <div class="w-16 h-16 bg-blue-600/10 text-blue-500 rounded-full flex items-center justify-center mb-4 text-2xl">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-2">Custom Automations</h4>
+                <p class="text-gray-500 text-sm">Zoho CRM, Marketing Cube Eloqua & Zapier Workflows built for enterprise clients.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- PROJECT STYLE SECTION -->
-<section id="projects" class="bg-[#0f1423] py-20 px-6">
-<div class="max-w-6xl mx-auto">
-<h3 class="text-3xl font-semibold mb-10">Key Work</h3>
+    <!-- EXPERIENCE TIMELINE -->
+    <section id="experience" class="max-w-4xl mx-auto py-32 px-6">
+        <div class="text-center mb-16">
+            <h3 class="text-sm font-bold text-blue-500 uppercase tracking-widest mb-2">My Journey</h3>
+            <h2 class="text-4xl font-bold text-white">Professional Experience</h2>
+        </div>
 
-<div class="grid md:grid-cols-3 gap-6">
+        <div class="relative space-y-12 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-800 before:to-transparent">
+            
+            <!-- Job 1 -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-blue-500 bg-blue-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                    <i class="fas fa-briefcase text-xs"></i>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl">
+                    <div class="flex items-center justify-between space-x-2 mb-2">
+                        <div class="font-bold text-white">Developer Programmer</div>
+                        <time class="text-xs font-bold text-blue-400">Sep 2024 – Present</time>
+                    </div>
+                    <div class="text-blue-400 text-sm mb-3">Ameya Informatics</div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Leading WordPress integrations, Zoho CRM automation pipelines, and resolving complex API synchronization issues for a diverse client base.
+                    </p>
+                </div>
+            </div>
 
-<div class="bg-white/5 p-6 rounded-xl border border-white/10">
-<h4 class="font-bold mb-2">Zoho API Automation</h4>
-<p class="text-gray-400 text-sm">
-Lead capture integrations using WordPress, Zoho Forms and CRM automation pipelines.
-</p>
-</div>
+            <!-- Job 2 -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 bg-gray-800 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                    <i class="fas fa-briefcase text-xs"></i>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl">
+                    <div class="flex items-center justify-between space-x-2 mb-2">
+                        <div class="font-bold text-white">Marketing Cloud Web Dev</div>
+                        <time class="text-xs font-bold text-gray-500">Jan 2022 – May 2023</time>
+                    </div>
+                    <div class="text-blue-400 text-sm mb-3">Marketing Cube</div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Developed high-converting dynamic emails, landing pages, and complex segmentation logic integrated with Oracle Eloqua.
+                    </p>
+                </div>
+            </div>
 
-<div class="bg-white/5 p-6 rounded-xl border border-white/10">
-<h4 class="font-bold mb-2">Eloqua Marketing Integrations</h4>
-<p class="text-gray-400 text-sm">
-Built dynamic landing pages and API workflows for enterprise marketing platforms.
-</p>
-</div>
+            <!-- Job 3 -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 bg-gray-800 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                    <i class="fas fa-briefcase text-xs"></i>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl">
+                    <div class="flex items-center justify-between space-x-2 mb-2">
+                        <div class="font-bold text-white">Systems Administrator</div>
+                        <time class="text-xs font-bold text-gray-500">Jan 2021 – Jun 2021</time>
+                    </div>
+                    <div class="text-blue-400 text-sm mb-3">Aim Institute of Health & Sciences</div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Responsible for LMS system maintenance, authentication flow management, and ensuring seamless platform deployments.
+                    </p>
+                </div>
+            </div>
 
-<div class="bg-white/5 p-6 rounded-xl border border-white/10">
-<h4 class="font-bold mb-2">AWS Hosted Web Apps</h4>
-<p class="text-gray-400 text-sm">
-Optimised performance, fixed deployment issues and improved responsiveness.
-</p>
-</div>
+        </div>
+    </section>
 
-</div>
-</div>
-</section>
+    <!-- CONTACT -->
+    <section id="contact" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto glass rounded-3xl p-12 text-center relative overflow-hidden">
+            <div class="blob opacity-10 absolute top-[-50%] left-[-50%]"></div>
+            
+            <h3 class="text-4xl font-bold mb-4 text-white">Let’s build something great.</h3>
+            <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
+                Currently open to new developer opportunities and technical collaborations in Melbourne and remotely.
+            </p>
 
-<!-- CONTACT -->
-<section id="contact" class="py-20 text-center px-6">
-<h3 class="text-3xl font-semibold mb-4">Let’s Work Together</h3>
-<p class="text-gray-400 mb-8">
-Open to developer opportunities and technical collaborations.
-</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="mailto:sumitshinde559@gmail.com" class="flex items-center justify-center gap-2 px-10 py-4 bg-white text-black font-bold rounded-xl hover:bg-blue-500 hover:text-white transition-all">
+                    <i class="fas fa-envelope"></i> sumitshinde559@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/sumitshinde/" target="_blank" class="flex items-center justify-center gap-2 px-10 py-4 glass text-white font-bold rounded-xl hover:bg-white/10 transition-all">
+                    <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
+            </div>
+        </div>
+    </section>
 
-<div class="flex justify-center gap-4">
-<a href="mailto:sumitshinde559@gmail.com"
-   class="px-8 py-3 bg-blue-600 rounded-lg hover:bg-blue-700">
-   Email
-</a>
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 bg-blue-600 rounded flex items-center justify-center text-[10px] font-bold">S</div>
+                <span class="text-white font-bold">Sumit Shinde</span>
+            </div>
+            
+            <div class="text-gray-500 text-sm">
+                &copy; 2026 Melbourne, AU. Built with Code & Passion.
+            </div>
 
-<a href="https://www.linkedin.com/in/sumitshinde/"
-   target="_blank"
-   class="px-8 py-3 bg-gray-800 rounded-lg hover:bg-gray-700">
-   LinkedIn
-</a>
-</div>
-</section>
+            <div class="flex gap-6 text-gray-500 text-lg">
+                <a href="https://github.com" class="hover:text-white transition"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/sumitshinde" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sumitshinde559@gmail.com" class="hover:text-white transition"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
 
-<footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-800">
-© 2026 Sumit Shinde
-</footer>
-
+    <script>
+        // Simple scroll observer for Navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-3', 'shadow-2xl');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('py-3', 'shadow-2xl');
+                nav.classList.add('py-4');
+            }
+        });
+    </script>
 </body>
 </html>
