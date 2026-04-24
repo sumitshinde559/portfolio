@@ -3,457 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumit Shinde | Web & CRM Systems Developer</title>
+    <title>Sumit Shinde | Web & MarTech Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #05070a;
         }
 
         .glass {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .gradient-text {
-            background: linear-gradient(135deg, #60a5fa 0%, #22d3ee 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .gradient-border {
+            position: relative;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 1.5rem;
+        }
+
+        .gradient-border::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 1.5rem;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.5), rgba(139, 92, 246, 0.5), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .marketing-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+        }
+
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(96, 165, 254, 0.5);
-            transition: all 0.3s ease;
-        }
-
-        .nav-link {
-            position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #60a5fa;
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.05);
         }
 
         .blob {
             position: absolute;
             width: 500px;
             height: 500px;
-            background: rgba(37, 99, 235, 0.15);
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
             filter: blur(80px);
-            border-radius: 50%;
             z-index: -1;
         }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #05070a; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
     </style>
 </head>
 
-<body class="bg-[#030712] text-gray-200 selection:bg-blue-500/30 overflow-x-hidden">
+<body class="text-slate-300 selection:bg-blue-500/30 overflow-x-hidden">
 
-    <!-- Background Blobs -->
-    <div class="blob top-[-100px] left-[-100px]"></div>
-    <div class="blob bottom-[-100px] right-[-100px]"></div>
+    <div class="blob top-[-100px] right-[-100px]"></div>
+    <div class="blob bottom-[20% ] left-[-100px]"></div>
 
     <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 transition-all duration-300 border-b border-white/5 bg-[#030712]/80 backdrop-blur-md">
+    <nav class="fixed w-full z-50 border-b border-white/5 bg-[#05070a]/80 backdrop-blur-xl">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold">S</div>
-                <h1 class="font-bold text-xl tracking-tight hidden sm:block text-white">Sumit Shinde</h1>
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 marketing-gradient rounded-xl flex items-center justify-center font-extrabold text-white">S</div>
+                <div class="flex flex-col leading-none">
+                    <span class="font-bold text-white text-lg tracking-tight">Sumit Shinde</span>
+                    <span class="text-[10px] text-blue-400 font-bold uppercase tracking-widest mt-1">Web & MarTech Developer</span>
+                </div>
             </div>
             
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
-                <a href="#about" class="nav-link hover:text-white transition">About</a>
-                <a href="#skills" class="nav-link hover:text-white transition">Skills</a>
-                <a href="#projects" class="nav-link hover:text-white transition">Projects</a>
-                <a href="#experience" class="nav-link hover:text-white transition">Experience</a>
-                <a href="#contact" class="nav-link hover:text-white transition">Contact</a>
+            <div class="hidden md:flex items-center space-x-10 text-xs font-bold uppercase tracking-widest">
+                <a href="#approach" class="hover:text-blue-400 transition">Architecture</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Stack</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Work</a>
+                <a href="#experience" class="hover:text-blue-400 transition">Exp</a>
             </div>
 
-            <a href="mailto:sumitshinde559@gmail.com" class="px-5 py-2 rounded-full bg-white text-black text-sm font-bold hover:bg-blue-500 hover:text-white transition-all">
-                Hire Me
+            <a href="mailto:sumitshinde559@gmail.com" class="px-5 py-2 rounded-full border border-white/10 hover:bg-white hover:text-black transition-all text-xs font-bold uppercase tracking-widest">
+                Connect
             </a>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="min-h-screen flex flex-col items-center justify-center px-6 pt-20">
-        <div class="max-w-4xl text-center">
-            <span class="px-4 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6 inline-block">
-                Based in Melbourne, Australia
-            </span>
-            
-            <h2 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white">
-                Web Developer & <br>
-                <span class="gradient-text">CRM Systems Specialist</span>
-            </h2>
-
-            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-                Bridging the gap between front-end aesthetics and backend logic. I specialize in WordPress, CRM automations, and complex API integrations.
-            </p>
-
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#projects" class="px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all shadow-lg shadow-blue-600/20">
-                    View My Work
-                </a>
-                <a href="https://www.linkedin.com/in/sumitshinde/" target="_blank" class="px-8 py-4 rounded-xl glass hover:bg-white/10 text-white font-bold transition-all flex items-center justify-center gap-2">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-        </div>
-        
-        <div class="mt-20 animate-bounce text-gray-600">
-            <i class="fas fa-chevron-down text-2xl"></i>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="max-w-6xl mx-auto px-6 py-32">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h3 class="text-sm font-bold text-blue-500 uppercase tracking-widest mb-2">Introduction</h3>
-                <h2 class="text-4xl font-bold mb-6 text-white">Solving business problems with code.</h2>
-                <div class="space-y-4 text-gray-400 text-lg leading-relaxed">
-                    <p>
-                        I am a Software Developer with extensive experience in building robust web applications across PHP, JavaScript, and modern frameworks. My expertise lies in creating seamless connections between websites and business systems.
-                    </p>
-                    <p>
-                        Whether it's optimizing WordPress environments, building API-driven automation pipelines for Zoho or Eloqua, or managing cloud-hosted infrastructure, I focus on performance, reliability, and user experience.
-                    </p>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="glass p-8 rounded-3xl text-center">
-                    <div class="text-4xl font-bold text-white mb-2">3+</div>
-                    <div class="text-gray-500 text-sm">Years Experience</div>
-                </div>
-                <div class="glass p-8 rounded-3xl text-center mt-8">
-                    <div class="text-4xl font-bold text-white mb-2">10+</div>
-                    <div class="text-gray-500 text-sm">Integrations Built</div>
-                </div>
-                <div class="glass p-8 rounded-3xl text-center">
-                    <div class="text-4xl font-bold text-white mb-2">5+</div>
-                    <div class="text-gray-500 text-sm">Major Projects</div>
-                </div>
-                <div class="glass p-8 rounded-3xl text-center mt-8">
-                    <div class="text-4xl font-bold text-white mb-2">100%</div>
-                    <div class="text-gray-500 text-sm">Melbourne Based</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="bg-white/[0.02] py-32 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h3 class="text-sm font-bold text-blue-500 uppercase tracking-widest mb-2">Capabilities</h3>
-                <h2 class="text-4xl font-bold text-white">My Tech Stack</h2>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Languages -->
-                <div class="glass p-8 rounded-2xl">
-                    <div class="w-12 h-12 bg-orange-500/20 text-orange-500 rounded-lg flex items-center justify-center mb-6 text-xl">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h4 class="font-bold text-xl mb-4 text-white">Languages</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>HTML5 / CSS3</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>PHP (Yii, Laravel)</li>
-                        <li>MySQL / PostgreSQL</li>
-                    </ul>
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex items-center pt-24 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-blue-500/20">
+                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Bridging Development & Marketing</span>
                 </div>
 
-                <!-- Frameworks -->
-                <div class="glass p-8 rounded-2xl">
-                    <div class="w-12 h-12 bg-blue-500/20 text-blue-500 rounded-lg flex items-center justify-center mb-6 text-xl">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <h4 class="font-bold text-xl mb-4 text-white">Frameworks</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>WordPress (Advanced)</li>
-                        <li>Angular</li>
-                        <li>Bootstrap / Tailwind</li>
-                        <li>React (Learning)</li>
-                    </ul>
-                </div>
+                <h1 class="text-6xl md:text-7xl font-extrabold leading-none text-white tracking-tighter">
+                    I build the <br>
+                    <span class="text-blue-500">Product.</span> <br>
+                    I engineer the <br>
+                    <span class="marketing-gradient bg-clip-text text-transparent">Engine.</span>
+                </h1>
 
-                <!-- CRM & Systems -->
-                <div class="glass p-8 rounded-2xl">
-                    <div class="w-12 h-12 bg-purple-500/20 text-purple-500 rounded-lg flex items-center justify-center mb-6 text-xl">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h4 class="font-bold text-xl mb-4 text-white">CRM & Integrations</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>Zoho CRM / Forms</li>
-                        <li>Oracle Eloqua</li>
-                        <li>REST API Development</li>
-                        <li>Zapier / Automation</li>
-                    </ul>
-                </div>
-
-                <!-- DevOps -->
-                <div class="glass p-8 rounded-2xl">
-                    <div class="w-12 h-12 bg-green-500/20 text-green-500 rounded-lg flex items-center justify-center mb-6 text-xl">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h4 class="font-bold text-xl mb-4 text-white">Tools & Cloud</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>AWS / Cloud Hosting</li>
-                        <li>Git / Version Control</li>
-                        <li>Jira (Agile/Scrum)</li>
-                        <li>LMS Management</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LIVE PROJECTS -->
-    <section id="projects" class="max-w-6xl mx-auto py-32 px-6">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-            <div>
-                <h3 class="text-sm font-bold text-blue-500 uppercase tracking-widest mb-2">Live Work</h3>
-                <h2 class="text-4xl font-bold text-white">Featured Projects</h2>
-                <p class="text-gray-400 mt-4 max-w-lg">
-                    A selection of enterprise websites and systems where I contributed through development, optimization, and ongoing maintenance.
+                <p class="text-lg text-slate-400 max-w-lg leading-relaxed font-medium">
+                    A hybrid developer bridging the gap between **Full-Stack Web Development** and **Marketing Technology (MarTech)**. I create seamless web experiences and the complex data pipelines that power them.
                 </p>
-            </div>
-        </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project 1 -->
-            <div class="project-card glass rounded-2xl overflow-hidden flex flex-col">
-                <div class="h-48 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center p-6 border-b border-white/5">
-                   <div class="text-white font-bold text-xl">NIMS Institute</div>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="flex gap-2 mb-3">
-                        <span class="text-[10px] bg-blue-500/20 text-blue-400 px-2 py-1 rounded font-bold uppercase">Development</span>
-                        <span class="text-[10px] bg-green-500/20 text-green-400 px-2 py-1 rounded font-bold uppercase">Optimization</span>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-2">NIMS Institute</h4>
-                    <p class="text-gray-400 text-sm mb-6">Education sector portal development focusing on LMS integration and responsive design.</p>
-                    <a href="https://nimsinstitute.edu.au" target="_blank" class="mt-auto flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition group">
-                        Visit Website <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition"></i>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="px-8 py-4 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20">
+                        View Projects
+                    </a>
+                    <a href="#skills" class="px-8 py-4 rounded-xl glass text-white font-bold border border-white/10 hover:bg-white/5 transition-all">
+                        Technical Stack
                     </a>
                 </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="project-card glass rounded-2xl overflow-hidden flex flex-col">
-                <div class="h-48 bg-gradient-to-br from-indigo-900 to-gray-900 flex items-center justify-center p-6 border-b border-white/5">
-                   <div class="text-white font-bold text-xl">AIM Institute</div>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="flex gap-2 mb-3">
-                        <span class="text-[10px] bg-blue-500/20 text-blue-400 px-2 py-1 rounded font-bold uppercase">Maintenance</span>
-                        <span class="text-[10px] bg-purple-500/20 text-purple-400 px-2 py-1 rounded font-bold uppercase">Systems</span>
+            <!-- Hybrid Dev Visual -->
+            <div class="relative group">
+                <div class="gradient-border p-8 lg:p-12">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="h-32 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex flex-col items-center justify-center p-4 text-center">
+                                <i class="fas fa-code text-blue-500 mb-2"></i>
+                                <span class="text-[10px] font-black uppercase text-blue-400">Web Dev</span>
+                                <span class="text-xs text-slate-300">React, Node, SQL, REST</span>
+                            </div>
+                            <div class="h-32 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center justify-center p-4 text-center">
+                                <i class="fas fa-server text-slate-400 mb-2"></i>
+                                <span class="text-[10px] font-black uppercase text-slate-500">Backend</span>
+                                <span class="text-xs text-slate-300">Auth, DB, APIs</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="h-32 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex flex-col items-center justify-center p-4 text-center">
+                                <i class="fas fa-chart-line text-purple-500 mb-2"></i>
+                                <span class="text-[10px] font-black uppercase text-purple-400">MarTech</span>
+                                <span class="text-xs text-slate-300">SFMC, Eloqua, Zoho</span>
+                            </div>
+                            <div class="h-32 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center justify-center p-4 text-center">
+                                <i class="fas fa-bolt text-pink-500 mb-2"></i>
+                                <span class="text-[10px] font-black uppercase text-pink-500">Automation</span>
+                                <span class="text-xs text-slate-300">Journeys, ETL, SQL</span>
+                            </div>
+                        </div>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-2">AIM Institute</h4>
-                    <p class="text-gray-400 text-sm mb-6">System administration and web development for health and science education platforms.</p>
-                    <a href="https://aiminstitute.edu.au" target="_blank" class="mt-auto flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition group">
-                        Visit Website <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition"></i>
-                    </a>
                 </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card glass rounded-2xl overflow-hidden flex flex-col">
-                <div class="h-48 bg-gradient-to-br from-blue-900 to-black flex items-center justify-center p-6 border-b border-white/5">
-                   <div class="text-white font-bold text-xl italic">ACT Cabs</div>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="flex gap-2 mb-3">
-                        <span class="text-[10px] bg-blue-500/20 text-blue-400 px-2 py-1 rounded font-bold uppercase">WordPress</span>
-                        <span class="text-[10px] bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded font-bold uppercase">API</span>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-2">ACT Cabs Canberra</h4>
-                    <p class="text-gray-400 text-sm mb-6">Commercial taxi service website development and integration of booking APIs.</p>
-                    <a href="https://actcabs.com.au" target="_blank" class="mt-auto flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition group">
-                        Visit Website <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-card glass rounded-2xl overflow-hidden flex flex-col">
-                <div class="h-48 bg-gradient-to-br from-red-900 to-gray-900 flex items-center justify-center p-6 border-b border-white/5">
-                   <div class="text-white font-bold text-xl italic underline">ANCC</div>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="flex gap-2 mb-3">
-                        <span class="text-[10px] bg-green-500/20 text-green-400 px-2 py-1 rounded font-bold uppercase">Enterprise</span>
-                        <span class="text-[10px] bg-red-500/20 text-red-400 px-2 py-1 rounded font-bold uppercase">Security</span>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-2">ANCC Check</h4>
-                    <p class="text-gray-400 text-sm mb-6">Web optimization and system maintenance for a national character check platform.</p>
-                    <a href="https://www.australiannationalcharactercheck.com.au" target="_blank" class="mt-auto flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition group">
-                        Visit Website <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Project 5 -->
-            <div class="project-card glass rounded-2xl overflow-hidden flex flex-col">
-                <div class="h-48 bg-gradient-to-br from-gray-700 to-blue-900 flex items-center justify-center p-6 border-b border-white/5">
-                   <div class="text-white font-bold text-xl uppercase tracking-widest">Portal</div>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="flex gap-2 mb-3">
-                        <span class="text-[10px] bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded font-bold uppercase">CRM Portal</span>
-                        <span class="text-[10px] bg-orange-500/20 text-orange-400 px-2 py-1 rounded font-bold uppercase">User Auth</span>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-2">ACT Cabs Portal</h4>
-                    <p class="text-gray-400 text-sm mb-6">Developing specialized user portals for cab management and reporting systems.</p>
-                    <a href="https://portalactcabs.com.au" target="_blank" class="mt-auto flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition group">
-                        Visit Website <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Project 6 (Automation Placeholder) -->
-             <div class="project-card border-2 border-dashed border-white/10 rounded-2xl overflow-hidden flex flex-col items-center justify-center p-8 text-center bg-transparent">
-                <div class="w-16 h-16 bg-blue-600/10 text-blue-500 rounded-full flex items-center justify-center mb-4 text-2xl">
-                    <i class="fas fa-bolt"></i>
-                </div>
-                <h4 class="text-xl font-bold text-white mb-2">Custom Automations</h4>
-                <p class="text-gray-500 text-sm">Zoho CRM, Marketing Cube Eloqua & Zapier Workflows built for enterprise clients.</p>
             </div>
         </div>
     </section>
 
-    <!-- EXPERIENCE TIMELINE -->
-    <section id="experience" class="max-w-4xl mx-auto py-32 px-6">
-        <div class="text-center mb-16">
-            <h3 class="text-sm font-bold text-blue-500 uppercase tracking-widest mb-2">My Journey</h3>
-            <h2 class="text-4xl font-bold text-white">Professional Experience</h2>
-        </div>
-
-        <div class="relative space-y-12 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-800 before:to-transparent">
-            
-            <!-- Job 1 -->
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-blue-500 bg-blue-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                    <i class="fas fa-briefcase text-xs"></i>
-                </div>
-                <div class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl">
-                    <div class="flex items-center justify-between space-x-2 mb-2">
-                        <div class="font-bold text-white">Developer Programmer</div>
-                        <time class="text-xs font-bold text-blue-400">Sep 2024 – Present</time>
+    <!-- CORE APPROACH -->
+    <section id="approach" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+            <div>
+                <h2 class="text-4xl font-extrabold text-white mb-8 tracking-tight">The Hybrid Advantage.</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-500"><i class="fas fa-layer-group"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Full-Stack Capability</h4>
+                            <p class="text-slate-400 text-sm">Building responsive web applications and custom portals using modern frameworks, ensuring high performance and accessible UI.</p>
+                        </div>
                     </div>
-                    <div class="text-blue-400 text-sm mb-3">Ameya Informatics</div>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Leading WordPress integrations, Zoho CRM automation pipelines, and resolving complex API synchronization issues for a diverse client base.
-                    </p>
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-500"><i class="fas fa-database"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Data-Driven Marketing</h4>
+                            <p class="text-slate-400 text-sm">Engineering the data layer. Expert in SFMC, Oracle Eloqua, and Zoho CRM—automating customer lifecycles via SQL and API integrations.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-500"><i class="fas fa-link"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Seamless Integrations</h4>
+                            <p class="text-slate-400 text-sm">The "Bridge" between the website and the CRM. Creating robust webhooks and REST pipelines to sync lead data in real-time.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!-- Job 2 -->
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 bg-gray-800 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                    <i class="fas fa-briefcase text-xs"></i>
-                </div>
-                <div class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl">
-                    <div class="flex items-center justify-between space-x-2 mb-2">
-                        <div class="font-bold text-white">Marketing Cloud Web Dev</div>
-                        <time class="text-xs font-bold text-gray-500">Jan 2022 – May 2023</time>
+            <div class="glass p-1 rounded-[32px]">
+                <div class="bg-[#0f172a] rounded-[30px] p-10 space-y-6">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-6">
+                        <span class="text-xs font-bold uppercase text-slate-500 tracking-widest">Current Tech Focus</span>
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                     </div>
-                    <div class="text-blue-400 text-sm mb-3">Marketing Cube</div>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Developed high-converting dynamic emails, landing pages, and complex segmentation logic integrated with Oracle Eloqua.
-                    </p>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-white text-sm">SFMC & MarTech Engine</span>
+                            <span class="text-blue-400 text-xs font-bold">95%</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-white/5 rounded-full"><div class="w-[95%] h-full marketing-gradient rounded-full"></div></div>
+                        
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-white text-sm">Web Development (React/PHP)</span>
+                            <span class="text-blue-400 text-xs font-bold">90%</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-white/5 rounded-full"><div class="w-[90%] h-full bg-blue-500 rounded-full"></div></div>
+
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-white text-sm">SQL & Data Architecture</span>
+                            <span class="text-blue-400 text-xs font-bold">85%</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-white/5 rounded-full"><div class="w-[85%] h-full bg-purple-500 rounded-full"></div></div>
+                    </div>
                 </div>
             </div>
-
-            <!-- Job 3 -->
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 bg-gray-800 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                    <i class="fas fa-briefcase text-xs"></i>
-                </div>
-                <div class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl">
-                    <div class="flex items-center justify-between space-x-2 mb-2">
-                        <div class="font-bold text-white">Systems Administrator</div>
-                        <time class="text-xs font-bold text-gray-500">Jan 2021 – Jun 2021</time>
-                    </div>
-                    <div class="text-blue-400 text-sm mb-3">Aim Institute of Health & Sciences</div>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Responsible for LMS system maintenance, authentication flow management, and ensuring seamless platform deployments.
-                    </p>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-32 px-6">
-        <div class="max-w-4xl mx-auto glass rounded-3xl p-12 text-center relative overflow-hidden">
-            <div class="blob opacity-10 absolute top-[-50%] left-[-50%]"></div>
-            
-            <h3 class="text-4xl font-bold mb-4 text-white">Let’s build something great.</h3>
-            <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
-                Currently open to new developer opportunities and technical collaborations in Melbourne and remotely.
-            </p>
+    <!-- WORK / PROJECTS -->
+    <section id="projects" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-white mb-12">Featured Deployments.</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="project-card glass rounded-[24px] overflow-hidden group">
+                    <div class="p-8 space-y-6">
+                        <div class="flex justify-between items-start">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500"><i class="fas fa-graduation-cap"></i></div>
+                            <span class="text-[10px] font-bold text-slate-500 uppercase">Education Tech</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">NIMS Institute</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Optimization of student portal and LMS integrations. Bridging web UI with backend compliance systems.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">WordPress</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">LMS</span>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="mailto:sumitshinde559@gmail.com" class="flex items-center justify-center gap-2 px-10 py-4 bg-white text-black font-bold rounded-xl hover:bg-blue-500 hover:text-white transition-all">
-                    <i class="fas fa-envelope"></i> sumitshinde559@gmail.com
-                </a>
-                <a href="https://www.linkedin.com/in/sumitshinde/" target="_blank" class="flex items-center justify-center gap-2 px-10 py-4 glass text-white font-bold rounded-xl hover:bg-white/10 transition-all">
-                    <i class="fab fa-linkedin"></i> LinkedIn Profile
-                </a>
+                <!-- Project 2 -->
+                <div class="project-card glass rounded-[24px] overflow-hidden group">
+                    <div class="p-8 space-y-6">
+                        <div class="flex justify-between items-start">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-500"><i class="fas fa-route"></i></div>
+                            <span class="text-[10px] font-bold text-slate-500 uppercase">Automation</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">MarTech Engine</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Designed and built cross-platform journeys between SFMC and Zoho CRM for automated lead nurturing.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">SFMC</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass rounded-[24px] overflow-hidden group">
+                    <div class="p-8 space-y-6">
+                        <div class="flex justify-between items-start">
+                            <div class="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-500"><i class="fas fa-terminal"></i></div>
+                            <span class="text-[10px] font-bold text-slate-500 uppercase">Web App</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">ACT Cabs Portal</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Full-stack portal development for real-time driver/client management with integrated booking APIs.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">API Integration</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-white mb-12">Professional History.</h2>
+            <div class="space-y-12">
+                <div class="relative pl-8 border-l border-white/5">
+                    <div class="absolute -left-1 top-0 w-2 h-2 rounded-full bg-blue-500"></div>
+                    <div class="mb-2">
+                        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">2024 — Present</span>
+                        <h4 class="text-xl font-bold text-white mt-1">Developer Programmer</h4>
+                        <span class="text-slate-500 text-sm">Ameya Informatics</span>
+                    </div>
+                    <p class="text-slate-400 text-sm">Developing end-to-end web applications and managing CRM data flows. Specializing in SFMC journey development and API-led integration between web assets and CRM platforms.</p>
+                </div>
+
+                <div class="relative pl-8 border-l border-white/5">
+                    <div class="absolute -left-1 top-0 w-2 h-2 rounded-full bg-slate-700"></div>
+                    <div class="mb-2">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">2022 — 2023</span>
+                        <h4 class="text-xl font-bold text-white mt-1">MarTech Web Developer</h4>
+                        <span class="text-slate-500 text-sm">Marketing Cube</span>
+                    </div>
+                    <p class="text-slate-400 text-sm">Built high-performance, dynamic landing pages and responsive email frameworks. Managed enterprise-level Oracle Eloqua and SFMC campaign architecture.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-12 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-2">
-                <div class="w-6 h-6 bg-blue-600 rounded flex items-center justify-center text-[10px] font-bold">S</div>
-                <span class="text-white font-bold">Sumit Shinde</span>
+    <footer class="py-16 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-2xl font-bold text-white mb-8">Let's bridge the gap together.</h2>
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="mailto:sumitshinde559@gmail.com" class="text-slate-400 hover:text-white transition"><i class="fas fa-envelope text-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/sumitshinde/" target="_blank" class="text-slate-400 hover:text-white transition"><i class="fab fa-linkedin text-2xl"></i></a>
             </div>
-            
-            <div class="text-gray-500 text-sm">
-                &copy; 2026 Melbourne, AU. Built with Code & Passion.
-            </div>
-
-            <div class="flex gap-6 text-gray-500 text-lg">
-                <a href="https://github.com" class="hover:text-white transition"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/sumitshinde" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:sumitshinde559@gmail.com" class="hover:text-white transition"><i class="fas fa-envelope"></i></a>
-            </div>
+            <p class="text-xs text-slate-600 font-bold uppercase tracking-[0.2em]">&copy; 2026 Sumit Shinde — Melbourne, VIC</p>
         </div>
     </footer>
 
     <script>
-        // Simple scroll observer for Navbar
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('py-3', 'shadow-2xl');
-                nav.classList.remove('py-4');
-            } else {
-                nav.classList.remove('py-3', 'shadow-2xl');
-                nav.classList.add('py-4');
-            }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
         });
     </script>
 </body>
