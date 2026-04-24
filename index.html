@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumit Shinde | Web & MarTech Developer</title>
+    <title>Sumit Shinde | Web & SFMC Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
         
+        :root {
+            --sf-blue: #00A1E0;
+            --sf-dark: #032d60;
+            --sf-cloud: #f3f2f2;
+        }
+
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #05070a;
+            background-color: #010409;
         }
 
         .glass {
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* SFMC Themed Gradient */
+        .sfmc-gradient {
+            background: linear-gradient(135deg, #00A1E0 0%, #0176d3 50%, #1589ee 100%);
+        }
+
+        .text-sfmc {
+            color: #00A1E0;
         }
 
         .gradient-border {
@@ -32,14 +47,10 @@
             inset: 0;
             border-radius: 1.5rem;
             padding: 1px;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.5), rgba(139, 92, 246, 0.5), transparent);
+            background: linear-gradient(135deg, #00A1E0, #0176d3, transparent);
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             mask-composite: exclude;
             pointer-events: none;
-        }
-
-        .marketing-gradient {
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
         }
 
         .project-card {
@@ -49,48 +60,51 @@
         .project-card:hover {
             transform: translateY(-8px);
             background: rgba(255, 255, 255, 0.05);
+            border-color: #00A1E0;
         }
 
-        .blob {
+        .cloud-blob {
             position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 161, 224, 0.08) 0%, transparent 70%);
             filter: blur(80px);
             z-index: -1;
         }
 
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #05070a; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-track { background: #010409; }
+        ::-webkit-scrollbar-thumb { background: #00A1E0; border-radius: 10px; }
     </style>
 </head>
 
 <body class="text-slate-300 selection:bg-blue-500/30 overflow-x-hidden">
 
-    <div class="blob top-[-100px] right-[-100px]"></div>
-    <div class="blob bottom-[20% ] left-[-100px]"></div>
+    <div class="cloud-blob top-[-100px] right-[-100px]"></div>
+    <div class="cloud-blob bottom-[20%] left-[-100px]"></div>
 
     <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 border-b border-white/5 bg-[#05070a]/80 backdrop-blur-xl">
+    <nav class="fixed w-full z-50 border-b border-white/10 bg-[#010409]/80 backdrop-blur-xl">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 marketing-gradient rounded-xl flex items-center justify-center font-extrabold text-white">S</div>
+                <div class="w-10 h-10 sfmc-gradient rounded-xl flex items-center justify-center font-extrabold text-white shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-cloud"></i>
+                </div>
                 <div class="flex flex-col leading-none">
                     <span class="font-bold text-white text-lg tracking-tight">Sumit Shinde</span>
-                    <span class="text-[10px] text-blue-400 font-bold uppercase tracking-widest mt-1">Web & MarTech Developer</span>
+                    <span class="text-[10px] text-sfmc font-bold uppercase tracking-widest mt-1">Web & SFMC Developer</span>
                 </div>
             </div>
             
             <div class="hidden md:flex items-center space-x-10 text-xs font-bold uppercase tracking-widest">
-                <a href="#approach" class="hover:text-blue-400 transition">Architecture</a>
-                <a href="#skills" class="hover:text-blue-400 transition">Stack</a>
-                <a href="#projects" class="hover:text-blue-400 transition">Work</a>
-                <a href="#experience" class="hover:text-blue-400 transition">Exp</a>
+                <a href="#architecture" class="hover:text-sfmc transition">Architecture</a>
+                <a href="#stack" class="hover:text-sfmc transition">Stack</a>
+                <a href="#work" class="hover:text-sfmc transition">Work</a>
+                <a href="#exp" class="hover:text-sfmc transition">Exp</a>
             </div>
 
-            <a href="mailto:sumitshinde559@gmail.com" class="px-5 py-2 rounded-full border border-white/10 hover:bg-white hover:text-black transition-all text-xs font-bold uppercase tracking-widest">
-                Connect
+            <a href="mailto:sumitshinde559@gmail.com" class="px-5 py-2 rounded-full border border-blue-500/30 text-sfmc hover:bg-sfmc hover:text-white transition-all text-xs font-bold uppercase tracking-widest">
+                Contact Me
             </a>
         </div>
     </nav>
@@ -100,56 +114,60 @@
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-8">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-blue-500/20">
-                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Bridging Development & Marketing</span>
+                    <i class="fas fa-certificate text-sfmc text-[10px]"></i>
+                    <span class="text-[10px] font-bold text-sfmc uppercase tracking-widest">Enterprise MarTech Specialist</span>
                 </div>
 
                 <h1 class="text-6xl md:text-7xl font-extrabold leading-none text-white tracking-tighter">
-                    I build the <br>
-                    <span class="text-blue-500">Product.</span> <br>
-                    I engineer the <br>
-                    <span class="marketing-gradient bg-clip-text text-transparent">Engine.</span>
+                    Crafting <br>
+                    <span class="text-sfmc">Web Solutions.</span> <br>
+                    Powering the <br>
+                    <span class="sfmc-gradient bg-clip-text text-transparent">Marketing Cloud.</span>
                 </h1>
 
                 <p class="text-lg text-slate-400 max-w-lg leading-relaxed font-medium">
-                    A hybrid developer bridging the gap between **Full-Stack Web Development** and **Marketing Technology (MarTech)**. I create seamless web experiences and the complex data pipelines that power them.
+                    Specialized hybrid developer focused on building high-performance web applications and engineering enterprise-scale automation within **Salesforce Marketing Cloud**.
                 </p>
 
                 <div class="flex flex-wrap gap-4">
-                    <a href="#projects" class="px-8 py-4 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20">
-                        View Projects
+                    <a href="#work" class="px-8 py-4 rounded-xl sfmc-gradient text-white font-bold hover:opacity-90 transition-all shadow-lg shadow-blue-500/20">
+                        View Deployments
                     </a>
-                    <a href="#skills" class="px-8 py-4 rounded-xl glass text-white font-bold border border-white/10 hover:bg-white/5 transition-all">
+                    <a href="#stack" class="px-8 py-4 rounded-xl glass text-white font-bold border border-white/10 hover:bg-white/5 transition-all">
                         Technical Stack
                     </a>
                 </div>
             </div>
 
-            <!-- Hybrid Dev Visual -->
-            <div class="relative group">
-                <div class="gradient-border p-8 lg:p-12">
-                    <div class="grid grid-cols-2 gap-4">
+            <!-- SFMC Themed Visual -->
+            <div class="relative">
+                <div class="gradient-border p-8 lg:p-12 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i class="fas fa-cloud text-9xl"></i>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 relative z-10">
                         <div class="space-y-4">
-                            <div class="h-32 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex flex-col items-center justify-center p-4 text-center">
-                                <i class="fas fa-code text-blue-500 mb-2"></i>
-                                <span class="text-[10px] font-black uppercase text-blue-400">Web Dev</span>
-                                <span class="text-xs text-slate-300">React, Node, SQL, REST</span>
+                            <div class="h-32 rounded-2xl bg-blue-500/5 border border-blue-500/10 flex flex-col items-center justify-center p-4 text-center">
+                                <i class="fas fa-code text-sfmc mb-2"></i>
+                                <span class="text-[10px] font-black uppercase text-sfmc">Front-End</span>
+                                <span class="text-xs text-slate-400">React, HTML5, CSS3</span>
                             </div>
                             <div class="h-32 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center justify-center p-4 text-center">
-                                <i class="fas fa-server text-slate-400 mb-2"></i>
-                                <span class="text-[10px] font-black uppercase text-slate-500">Backend</span>
-                                <span class="text-xs text-slate-300">Auth, DB, APIs</span>
+                                <i class="fas fa-database text-slate-400 mb-2"></i>
+                                <span class="text-[10px] font-black uppercase text-slate-500">Back-End</span>
+                                <span class="text-xs text-slate-400">Node, PHP, SQL</span>
                             </div>
                         </div>
                         <div class="space-y-4 pt-8">
-                            <div class="h-32 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex flex-col items-center justify-center p-4 text-center">
-                                <i class="fas fa-chart-line text-purple-500 mb-2"></i>
-                                <span class="text-[10px] font-black uppercase text-purple-400">MarTech</span>
-                                <span class="text-xs text-slate-300">SFMC, Eloqua, Zoho</span>
+                            <div class="h-32 rounded-2xl bg-sky-500/5 border border-sky-500/10 flex flex-col items-center justify-center p-4 text-center">
+                                <i class="fas fa-bolt text-sky-400 mb-2"></i>
+                                <span class="text-[10px] font-black uppercase text-sky-400">AMPscript</span>
+                                <span class="text-xs text-slate-400">Dynamic Content</span>
                             </div>
                             <div class="h-32 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center justify-center p-4 text-center">
-                                <i class="fas fa-bolt text-pink-500 mb-2"></i>
-                                <span class="text-[10px] font-black uppercase text-pink-500">Automation</span>
-                                <span class="text-xs text-slate-300">Journeys, ETL, SQL</span>
+                                <i class="fas fa-sync text-blue-400 mb-2"></i>
+                                <span class="text-[10px] font-black uppercase text-blue-400">Integrations</span>
+                                <span class="text-xs text-slate-400">APIs, Webhooks</span>
                             </div>
                         </div>
                     </div>
@@ -158,121 +176,95 @@
         </div>
     </section>
 
-    <!-- CORE APPROACH -->
-    <section id="approach" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
-            <div>
-                <h2 class="text-4xl font-extrabold text-white mb-8 tracking-tight">The Hybrid Advantage.</h2>
-                <div class="space-y-8">
-                    <div class="flex gap-6">
-                        <div class="w-12 h-12 shrink-0 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-500"><i class="fas fa-layer-group"></i></div>
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-2">Full-Stack Capability</h4>
-                            <p class="text-slate-400 text-sm">Building responsive web applications and custom portals using modern frameworks, ensuring high performance and accessible UI.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6">
-                        <div class="w-12 h-12 shrink-0 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-500"><i class="fas fa-database"></i></div>
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-2">Data-Driven Marketing</h4>
-                            <p class="text-slate-400 text-sm">Engineering the data layer. Expert in SFMC, Oracle Eloqua, and Zoho CRM—automating customer lifecycles via SQL and API integrations.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6">
-                        <div class="w-12 h-12 shrink-0 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-500"><i class="fas fa-link"></i></div>
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-2">Seamless Integrations</h4>
-                            <p class="text-slate-400 text-sm">The "Bridge" between the website and the CRM. Creating robust webhooks and REST pipelines to sync lead data in real-time.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- ARCHITECTURE -->
+    <section id="architecture" class="py-32 px-6 bg-white/[0.01]">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-2xl mb-16">
+                <h2 class="text-3xl font-extrabold text-white mb-4">Engineering the Flow.</h2>
+                <p class="text-slate-400">From the first line of CSS to the final SQL query in a Journey Builder automation.</p>
             </div>
-            <div class="glass p-1 rounded-[32px]">
-                <div class="bg-[#0f172a] rounded-[30px] p-10 space-y-6">
-                    <div class="flex justify-between items-center border-b border-white/5 pb-6">
-                        <span class="text-xs font-bold uppercase text-slate-500 tracking-widest">Current Tech Focus</span>
-                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-white text-sm">SFMC & MarTech Engine</span>
-                            <span class="text-blue-400 text-xs font-bold">95%</span>
-                        </div>
-                        <div class="w-full h-1.5 bg-white/5 rounded-full"><div class="w-[95%] h-full marketing-gradient rounded-full"></div></div>
-                        
-                        <div class="flex justify-between items-center pt-2">
-                            <span class="text-white text-sm">Web Development (React/PHP)</span>
-                            <span class="text-blue-400 text-xs font-bold">90%</span>
-                        </div>
-                        <div class="w-full h-1.5 bg-white/5 rounded-full"><div class="w-[90%] h-full bg-blue-500 rounded-full"></div></div>
-
-                        <div class="flex justify-between items-center pt-2">
-                            <span class="text-white text-sm">SQL & Data Architecture</span>
-                            <span class="text-blue-400 text-xs font-bold">85%</span>
-                        </div>
-                        <div class="w-full h-1.5 bg-white/5 rounded-full"><div class="w-[85%] h-full bg-purple-500 rounded-full"></div></div>
-                    </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl glass border-t-2 border-sfmc">
+                    <h4 class="text-white font-bold mb-4 flex items-center gap-3">
+                        <i class="fas fa-laptop-code text-sfmc"></i> Web Dev
+                    </h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Developing responsive, pixel-perfect web interfaces that serve as the primary entry point for customer data and interaction.</p>
+                </div>
+                <div class="p-8 rounded-3xl glass border-t-2 border-sky-400">
+                    <h4 class="text-white font-bold mb-4 flex items-center gap-3">
+                        <i class="fas fa-microchip text-sky-400"></i> SFMC Logic
+                    </h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Implementing complex business logic using AMPscript and SSJS to personalize the customer experience at scale.</p>
+                </div>
+                <div class="p-8 rounded-3xl glass border-t-2 border-white/20">
+                    <h4 class="text-white font-bold mb-4 flex items-center gap-3">
+                        <i class="fas fa-project-diagram text-slate-400"></i> Data Pipeline
+                    </h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Designing SQL-based data extensions and automation workflows to ensure seamless data flow between Web and CRM.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WORK / PROJECTS -->
-    <section id="projects" class="py-32 px-6">
+    <!-- STACK -->
+    <section id="stack" class="py-32 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-extrabold text-white mb-12">Featured Deployments.</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project 1 -->
-                <div class="project-card glass rounded-[24px] overflow-hidden group">
-                    <div class="p-8 space-y-6">
-                        <div class="flex justify-between items-start">
-                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500"><i class="fas fa-graduation-cap"></i></div>
-                            <span class="text-[10px] font-bold text-slate-500 uppercase">Education Tech</span>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-2">NIMS Institute</h4>
-                            <p class="text-slate-400 text-sm leading-relaxed">Optimization of student portal and LMS integrations. Bridging web UI with backend compliance systems.</p>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">WordPress</span>
-                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">LMS</span>
-                        </div>
+            <h2 class="text-3xl font-extrabold text-white mb-12">The Toolkit.</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="p-6 rounded-2xl border border-white/5 hover:border-sfmc/50 transition-colors group">
+                    <span class="text-xs font-black uppercase text-slate-500 group-hover:text-sfmc">SFMC Specialist</span>
+                    <p class="text-white font-bold mt-2">Journey Builder, AMPscript, Automation Studio, SSJS</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-white/5 hover:border-sfmc/50 transition-colors group">
+                    <span class="text-xs font-black uppercase text-slate-500 group-hover:text-sfmc">Modern Web</span>
+                    <p class="text-white font-bold mt-2">React, Tailwind CSS, JavaScript (ES6+), HTML5</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-white/5 hover:border-sfmc/50 transition-colors group">
+                    <span class="text-xs font-black uppercase text-slate-500 group-hover:text-sfmc">Back-End & DB</span>
+                    <p class="text-white font-bold mt-2">Node.js, PHP, MySQL, T-SQL, REST/SOAP APIs</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-white/5 hover:border-sfmc/50 transition-colors group">
+                    <span class="text-xs font-black uppercase text-slate-500 group-hover:text-sfmc">Platforms</span>
+                    <p class="text-white font-bold mt-2">Oracle Eloqua, Zoho CRM, WordPress, AWS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="py-32 px-6 bg-white/[0.01]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-white mb-12">Selected Projects.</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- ACT CABS Project -->
+                <div class="project-card glass rounded-[24px] p-8 space-y-6 border-l-2 border-sfmc">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-sfmc"><i class="fas fa-taxi"></i></div>
+                    <h4 class="text-xl font-bold text-white">ACT Cabs: Driver Portal</h4>
+                    <p class="text-slate-400 text-sm">Improved the Driver Account Management Portal by architecting custom PHP modules within WordPress to streamline earnings reports, documentation, and real-time dispatch data sync.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] font-bold px-2 py-1 bg-white/5 text-slate-500 rounded border border-white/10 uppercase">WordPress</span>
+                        <span class="text-[10px] font-bold px-2 py-1 bg-white/5 text-slate-500 rounded border border-white/10 uppercase">PHP (Custom)</span>
+                        <span class="text-[10px] font-bold px-2 py-1 bg-white/5 text-slate-500 rounded border border-white/10 uppercase">MySQL</span>
                     </div>
                 </div>
-
                 <!-- Project 2 -->
-                <div class="project-card glass rounded-[24px] overflow-hidden group">
-                    <div class="p-8 space-y-6">
-                        <div class="flex justify-between items-start">
-                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-500"><i class="fas fa-route"></i></div>
-                            <span class="text-[10px] font-bold text-slate-500 uppercase">Automation</span>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-2">MarTech Engine</h4>
-                            <p class="text-slate-400 text-sm leading-relaxed">Designed and built cross-platform journeys between SFMC and Zoho CRM for automated lead nurturing.</p>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">SFMC</span>
-                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">SQL</span>
-                        </div>
+                <div class="project-card glass rounded-[24px] p-8 space-y-6">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-sfmc"><i class="fas fa-link"></i></div>
+                    <h4 class="text-xl font-bold text-white">Dynamic Content Engine</h4>
+                    <p class="text-slate-400 text-sm">A custom-built SFMC framework using AMPscript to deliver real-time personalized recommendations based on web behavior.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] font-bold px-2 py-1 bg-sfmc/10 text-sfmc rounded">AMPSCRIPT</span>
+                        <span class="text-[10px] font-bold px-2 py-1 bg-sfmc/10 text-sfmc rounded">SFMC</span>
                     </div>
                 </div>
-
                 <!-- Project 3 -->
-                <div class="project-card glass rounded-[24px] overflow-hidden group">
-                    <div class="p-8 space-y-6">
-                        <div class="flex justify-between items-start">
-                            <div class="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-500"><i class="fas fa-terminal"></i></div>
-                            <span class="text-[10px] font-bold text-slate-500 uppercase">Web App</span>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-2">ACT Cabs Portal</h4>
-                            <p class="text-slate-400 text-sm leading-relaxed">Full-stack portal development for real-time driver/client management with integrated booking APIs.</p>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">API Integration</span>
-                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">PHP</span>
-                        </div>
+                <div class="project-card glass rounded-[24px] p-8 space-y-6">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-sfmc"><i class="fas fa-sync"></i></div>
+                    <h4 class="text-xl font-bold text-white">LMS Integration</h4>
+                    <p class="text-slate-400 text-sm">Connecting student management systems with marketing automation to trigger personalized learning journeys.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] font-bold px-2 py-1 bg-white/5 text-slate-500 rounded">SQL</span>
+                        <span class="text-[10px] font-bold px-2 py-1 bg-white/5 text-slate-500 rounded">AUTOMATION</span>
                     </div>
                 </div>
             </div>
@@ -280,42 +272,48 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="py-32 px-6">
+    <section id="exp" class="py-32 px-6">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-extrabold text-white mb-12">Professional History.</h2>
+            <h2 class="text-3xl font-extrabold text-white mb-16">Career Journey.</h2>
             <div class="space-y-12">
-                <div class="relative pl-8 border-l border-white/5">
-                    <div class="absolute -left-1 top-0 w-2 h-2 rounded-full bg-blue-500"></div>
-                    <div class="mb-2">
-                        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">2024 — Present</span>
-                        <h4 class="text-xl font-bold text-white mt-1">Developer Programmer</h4>
-                        <span class="text-slate-500 text-sm">Ameya Informatics</span>
+                <div class="relative pl-8 border-l border-sfmc">
+                    <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-sfmc shadow-[0_0_10px_#00A1E0]"></div>
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-sfmc uppercase tracking-[0.2em]">Aug 2024 — Mar 2026</span>
+                        <h4 class="text-2xl font-bold text-white mt-1">Developer Programmer</h4>
+                        <span class="text-slate-500 font-semibold">Ameya Informatics</span>
                     </div>
-                    <p class="text-slate-400 text-sm">Developing end-to-end web applications and managing CRM data flows. Specializing in SFMC journey development and API-led integration between web assets and CRM platforms.</p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Led the development of integrated web solutions and managed end-to-end **Salesforce Marketing Cloud** operations. Engineered complex data schemas, high-volume automation workflows, and custom API-driven lead captures.
+                    </p>
                 </div>
 
-                <div class="relative pl-8 border-l border-white/5">
-                    <div class="absolute -left-1 top-0 w-2 h-2 rounded-full bg-slate-700"></div>
-                    <div class="mb-2">
-                        <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">2022 — 2023</span>
-                        <h4 class="text-xl font-bold text-white mt-1">MarTech Web Developer</h4>
-                        <span class="text-slate-500 text-sm">Marketing Cube</span>
+                <div class="relative pl-8 border-l border-white/10 opacity-70">
+                    <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-slate-800"></div>
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em]">2022 — 2023</span>
+                        <h4 class="text-2xl font-bold text-white mt-1">MarTech Web Developer</h4>
+                        <span class="text-slate-500 font-semibold">Marketing Cube</span>
                     </div>
-                    <p class="text-slate-400 text-sm">Built high-performance, dynamic landing pages and responsive email frameworks. Managed enterprise-level Oracle Eloqua and SFMC campaign architecture.</p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Developed responsive campaign assets and dynamic landing pages for Oracle Eloqua and SFMC. Optimized conversion pathways through technical UX improvements and behavioral tracking.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-16 border-t border-white/5 px-6">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-2xl font-bold text-white mb-8">Let's bridge the gap together.</h2>
-            <div class="flex justify-center gap-6 mb-12">
-                <a href="mailto:sumitshinde559@gmail.com" class="text-slate-400 hover:text-white transition"><i class="fas fa-envelope text-2xl"></i></a>
-                <a href="https://www.linkedin.com/in/sumitshinde/" target="_blank" class="text-slate-400 hover:text-white transition"><i class="fab fa-linkedin text-2xl"></i></a>
+    <footer class="py-24 border-t border-white/5 px-6 bg-[#010409]">
+        <div class="max-w-7xl mx-auto text-center space-y-8">
+            <h2 class="text-3xl font-bold text-white">Let's build the future of <span class="text-sfmc">Marketing Ops</span>.</h2>
+            <div class="flex justify-center gap-8">
+                <a href="mailto:sumitshinde559@gmail.com" class="text-slate-500 hover:text-sfmc transition text-2xl"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/sumitshinde/" target="_blank" class="text-slate-500 hover:text-sfmc transition text-2xl"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p class="text-xs text-slate-600 font-bold uppercase tracking-[0.2em]">&copy; 2026 Sumit Shinde — Melbourne, VIC</p>
+            <div class="pt-8 text-[10px] text-slate-600 font-black uppercase tracking-[0.4em]">
+                &copy; 2026 Sumit Shinde
+            </div>
         </div>
     </footer>
 
