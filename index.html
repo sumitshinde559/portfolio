@@ -3,36 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumit Shinde | Web & SFMC Developer</title>
+    <title>Sumit Shinde | Web & MarTech Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
         
-        :root {
-            --sf-blue: #00A1E0;
-            --sf-dark: #032d60;
-            --sf-cloud: #f3f2f2;
-        }
-
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #010409;
+            background-color: #05070a;
         }
 
         .glass {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* SFMC Themed Gradient */
-        .sfmc-gradient {
-            background: linear-gradient(135deg, #00A1E0 0%, #0176d3 50%, #1589ee 100%);
-        }
-
-        .text-sfmc {
-            color: #00A1E0;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .gradient-border {
@@ -47,10 +32,14 @@
             inset: 0;
             border-radius: 1.5rem;
             padding: 1px;
-            background: linear-gradient(135deg, #00A1E0, #0176d3, transparent);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.5), rgba(139, 92, 246, 0.5), transparent);
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             mask-composite: exclude;
             pointer-events: none;
+        }
+
+        .marketing-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
         }
 
         .project-card {
@@ -60,51 +49,50 @@
         .project-card:hover {
             transform: translateY(-8px);
             background: rgba(255, 255, 255, 0.05);
-            border-color: #00A1E0;
+            border-color: rgba(139, 92, 246, 0.4);
         }
 
-        .cloud-blob {
+        .blob {
             position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0, 161, 224, 0.08) 0%, transparent 70%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
             filter: blur(80px);
             z-index: -1;
         }
 
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #010409; }
-        ::-webkit-scrollbar-thumb { background: #00A1E0; border-radius: 10px; }
+        ::-webkit-scrollbar-track { background: #05070a; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
     </style>
 </head>
 
 <body class="text-slate-300 selection:bg-blue-500/30 overflow-x-hidden">
 
-    <div class="cloud-blob top-[-100px] right-[-100px]"></div>
-    <div class="cloud-blob bottom-[20%] left-[-100px]"></div>
+    <div class="blob top-[-100px] right-[-100px]"></div>
+    <div class="blob bottom-[20%] left-[-100px]"></div>
 
     <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 border-b border-white/10 bg-[#010409]/80 backdrop-blur-xl">
+    <nav class="fixed w-full z-50 border-b border-white/5 bg-[#05070a]/80 backdrop-blur-xl">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 sfmc-gradient rounded-xl flex items-center justify-center font-extrabold text-white shadow-lg shadow-blue-500/20">
-                    <i class="fas fa-cloud"></i>
-                </div>
+                <div class="w-10 h-10 marketing-gradient rounded-xl flex items-center justify-center font-extrabold text-white shadow-lg shadow-blue-500/20">S</div>
                 <div class="flex flex-col leading-none">
                     <span class="font-bold text-white text-lg tracking-tight">Sumit Shinde</span>
-                    <span class="text-[10px] text-sfmc font-bold uppercase tracking-widest mt-1">Web & SFMC Developer</span>
+                    <span class="text-[10px] text-blue-400 font-bold uppercase tracking-widest mt-1">Web & MarTech Developer</span>
                 </div>
             </div>
             
-            <div class="hidden md:flex items-center space-x-10 text-xs font-bold uppercase tracking-widest">
-                <a href="#architecture" class="hover:text-sfmc transition">Architecture</a>
-                <a href="#stack" class="hover:text-sfmc transition">Stack</a>
-                <a href="#work" class="hover:text-sfmc transition">Work</a>
-                <a href="#exp" class="hover:text-sfmc transition">Exp</a>
+            <div class="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#approach" class="hover:text-blue-400 transition">Approach</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Stack</a>
+                <a href="#emails" class="hover:text-blue-400 transition">Campaign eDMs</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Deployments</a>
+                <a href="#experience" class="hover:text-blue-400 transition">History</a>
             </div>
 
-            <a href="mailto:sumitshinde559@gmail.com" class="px-5 py-2 rounded-full border border-blue-500/30 text-sfmc hover:bg-sfmc hover:text-white transition-all text-xs font-bold uppercase tracking-widest">
-                Contact Me
+            <a href="mailto:sumitshinde559@gmail.com" class="px-5 py-2 rounded-full border border-white/10 hover:bg-white hover:text-black transition-all text-xs font-bold uppercase tracking-widest">
+                Connect
             </a>
         </div>
     </nav>
@@ -113,61 +101,54 @@
     <section class="min-h-screen flex items-center pt-24 px-6">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-8">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-blue-500/20">
-                    <i class="fas fa-certificate text-sfmc text-[10px]"></i>
-                    <span class="text-[10px] font-bold text-sfmc uppercase tracking-widest">Enterprise MarTech Specialist</span>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border border-blue-500/20">
+                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Bridging Engineering & Campaign Performance</span>
                 </div>
 
                 <h1 class="text-6xl md:text-7xl font-extrabold leading-none text-white tracking-tighter">
-                    Crafting <br>
-                    <span class="text-sfmc">Web Solutions.</span> <br>
-                    Powering the <br>
-                    <span class="sfmc-gradient bg-clip-text text-transparent">Marketing Cloud.</span>
+                    Marketing Cloud Focused <br>
+                    <span class="marketing-gradient bg-clip-text text-transparent">Developer Programmer.</span>
                 </h1>
 
                 <p class="text-lg text-slate-400 max-w-lg leading-relaxed font-medium">
-                    Specialized hybrid developer focused on building high-performance web applications and engineering enterprise-scale automation within **Salesforce Marketing Cloud**.
+                    A hybrid developer specializing in robust **Full-Stack Web Development** and **Marketing Technology (MarTech)**. I write semantic frontends, configure secure database layers, and connect lead-ingestion pipelines.
                 </p>
 
                 <div class="flex flex-wrap gap-4">
-                    <a href="#work" class="px-8 py-4 rounded-xl sfmc-gradient text-white font-bold hover:opacity-90 transition-all shadow-lg shadow-blue-500/20">
+                    <a href="#projects" class="px-8 py-4 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20">
                         View Deployments
                     </a>
-                    <a href="#stack" class="px-8 py-4 rounded-xl glass text-white font-bold border border-white/10 hover:bg-white/5 transition-all">
-                        Technical Stack
+                    <a href="#emails" class="px-8 py-4 rounded-xl glass text-white font-bold border border-white/10 hover:bg-white/5 transition-all">
+                        Inspect eDMs
                     </a>
                 </div>
             </div>
 
-            <!-- SFMC Themed Visual -->
-            <div class="relative">
-                <div class="gradient-border p-8 lg:p-12 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10">
-                        <i class="fas fa-cloud text-9xl"></i>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4 relative z-10">
+            <div class="relative group">
+                <div class="gradient-border p-8 lg:p-12">
+                    <div class="grid grid-cols-2 gap-4">
                         <div class="space-y-4">
-                            <div class="h-32 rounded-2xl bg-blue-500/5 border border-blue-500/10 flex flex-col items-center justify-center p-4 text-center">
-                                <i class="fas fa-code text-sfmc mb-2"></i>
-                                <span class="text-[10px] font-black uppercase text-sfmc">Front-End</span>
-                                <span class="text-xs text-slate-400">React, HTML5, CSS3</span>
+                            <div class="h-32 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex flex-col items-center justify-center p-4 text-center">
+                                <i class="fas fa-code text-blue-500 mb-2"></i>
+                                <span class="text-[10px] font-black uppercase text-blue-400">Web Dev</span>
+                                <span class="text-xs text-slate-300">React, WordPress, PHP, Yii</span>
                             </div>
                             <div class="h-32 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center justify-center p-4 text-center">
-                                <i class="fas fa-database text-slate-400 mb-2"></i>
-                                <span class="text-[10px] font-black uppercase text-slate-500">Back-End</span>
-                                <span class="text-xs text-slate-400">Node, PHP, SQL</span>
+                                <i class="fas fa-server text-slate-400 mb-2"></i>
+                                <span class="text-[10px] font-black uppercase text-slate-500">Database</span>
+                                <span class="text-xs text-slate-300">MySQL, T-SQL, API Endpoints</span>
                             </div>
                         </div>
                         <div class="space-y-4 pt-8">
-                            <div class="h-32 rounded-2xl bg-sky-500/5 border border-sky-500/10 flex flex-col items-center justify-center p-4 text-center">
-                                <i class="fas fa-bolt text-sky-400 mb-2"></i>
-                                <span class="text-[10px] font-black uppercase text-sky-400">AMPscript</span>
-                                <span class="text-xs text-slate-400">Dynamic Content</span>
+                            <div class="h-32 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex flex-col items-center justify-center p-4 text-center">
+                                <i class="fas fa-funnel-dollar text-purple-500 mb-2"></i>
+                                <span class="text-[10px] font-black uppercase text-purple-400">MarTech Integration</span>
+                                <span class="text-xs text-slate-300">Eloqua, CRM, Zoho Systems</span>
                             </div>
                             <div class="h-32 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center justify-center p-4 text-center">
-                                <i class="fas fa-sync text-blue-400 mb-2"></i>
-                                <span class="text-[10px] font-black uppercase text-blue-400">Integrations</span>
-                                <span class="text-xs text-slate-400">APIs, Webhooks</span>
+                                <i class="fas fa-envelope-open text-pink-500 mb-2"></i>
+                                <span class="text-[10px] font-black uppercase text-pink-500">Email Engineering</span>
+                                <span class="text-xs text-slate-300">Fluid Tables, Litmus Testing</span>
                             </div>
                         </div>
                     </div>
@@ -176,95 +157,356 @@
         </div>
     </section>
 
-    <!-- ARCHITECTURE -->
-    <section id="architecture" class="py-32 px-6 bg-white/[0.01]">
-        <div class="max-w-7xl mx-auto">
-            <div class="max-w-2xl mb-16">
-                <h2 class="text-3xl font-extrabold text-white mb-4">Engineering the Flow.</h2>
-                <p class="text-slate-400">From the first line of CSS to the final SQL query in a Journey Builder automation.</p>
+    <!-- CORE APPROACH -->
+    <section id="approach" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+            <div>
+                <h2 class="text-4xl font-extrabold text-white mb-8 tracking-tight">The Hybrid Advantage.</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-500"><i class="fas fa-layer-group"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Full-Stack Capability</h4>
+                            <p class="text-slate-400 text-sm">Building custom responsive websites, client-side portals, and dynamic form logic utilizing modern frameworks and standard architectures.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-500"><i class="fas fa-database"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Optimized Campaign Pipelines</h4>
+                            <p class="text-slate-400 text-sm">Deploying scalable digital architectures. Skilled in configuring landing pages, tracking mechanisms, and lead capture endpoints.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-500"><i class="fas fa-link"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Seamless CRM Syncs</h4>
+                            <p class="text-slate-400 text-sm">Developing real-time API integrations, mapping JSON payloads to securely transmit and ingest prospect credentials to platforms like Oracle Eloqua and Zoho.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-3xl glass border-t-2 border-sfmc">
-                    <h4 class="text-white font-bold mb-4 flex items-center gap-3">
-                        <i class="fas fa-laptop-code text-sfmc"></i> Web Dev
-                    </h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Developing responsive, pixel-perfect web interfaces that serve as the primary entry point for customer data and interaction.</p>
-                </div>
-                <div class="p-8 rounded-3xl glass border-t-2 border-sky-400">
-                    <h4 class="text-white font-bold mb-4 flex items-center gap-3">
-                        <i class="fas fa-microchip text-sky-400"></i> SFMC Logic
-                    </h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Implementing complex business logic using AMPscript and SSJS to personalize the customer experience at scale.</p>
-                </div>
-                <div class="p-8 rounded-3xl glass border-t-2 border-white/20">
-                    <h4 class="text-white font-bold mb-4 flex items-center gap-3">
-                        <i class="fas fa-project-diagram text-slate-400"></i> Data Pipeline
-                    </h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Designing SQL-based data extensions and automation workflows to ensure seamless data flow between Web and CRM.</p>
+            <div class="glass p-1 rounded-[32px]">
+                <div class="bg-[#0f172a] rounded-[30px] p-10 space-y-6">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-6">
+                        <span class="text-xs font-bold uppercase text-slate-500 tracking-widest">Core Technical Weighting</span>
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-white text-sm">Web Application Engineering (PHP / WordPress)</span>
+                            <span class="text-blue-400 text-xs font-bold">95%</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-white/5 rounded-full"><div class="w-[95%] h-full bg-blue-500 rounded-full"></div></div>
+                        
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-white text-sm">Marketing Automation (Forms, Lead Ingestion, Webhooks)</span>
+                            <span class="text-blue-400 text-xs font-bold">90%</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-white/5 rounded-full"><div class="w-[90%] h-full marketing-gradient rounded-full"></div></div>
+
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-white text-sm">Data Architecture (SQL Querying & DB Syncing)</span>
+                            <span class="text-blue-400 text-xs font-bold">85%</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-white/5 rounded-full"><div class="w-[85%] h-full bg-purple-500 rounded-full"></div></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- STACK -->
-    <section id="stack" class="py-32 px-6">
+    <section id="skills" class="py-32 px-6 bg-white/[0.01]">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-extrabold text-white mb-12">The Toolkit.</h2>
+            <h2 class="text-3xl font-extrabold text-white mb-12">The Ecosystem.</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="p-6 rounded-2xl border border-white/5 hover:border-sfmc/50 transition-colors group">
-                    <span class="text-xs font-black uppercase text-slate-500 group-hover:text-sfmc">SFMC Specialist</span>
-                    <p class="text-white font-bold mt-2">Journey Builder, AMPscript, Automation Studio, SSJS</p>
+                <div class="glass p-8 rounded-3xl border-t-2 border-blue-500">
+                    <h4 class="text-white font-bold mb-4">Web Development</h4>
+                    <ul class="text-xs space-y-2 text-slate-500 uppercase font-bold tracking-widest">
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>PHP (WordPress & Yii)</li>
+                        <li>Tailwind & Bootstrap</li>
+                    </ul>
                 </div>
-                <div class="p-6 rounded-2xl border border-white/5 hover:border-sfmc/50 transition-colors group">
-                    <span class="text-xs font-black uppercase text-slate-500 group-hover:text-sfmc">Modern Web</span>
-                    <p class="text-white font-bold mt-2">React, Tailwind CSS, JavaScript (ES6+), HTML5</p>
+                <div class="glass p-8 rounded-3xl border-t-2 border-purple-500">
+                    <h4 class="text-white font-bold mb-4">Marketing Tech</h4>
+                    <ul class="text-xs space-y-2 text-slate-500 uppercase font-bold tracking-widest">
+                        <li>Oracle Eloqua</li>
+                        <li>Eloqua Forms & Rules</li>
+                        <li>Zoho CRM / Forms</li>
+                        <li>Landing Page Optimization</li>
+                    </ul>
                 </div>
-                <div class="p-6 rounded-2xl border border-white/5 hover:border-sfmc/50 transition-colors group">
-                    <span class="text-xs font-black uppercase text-slate-500 group-hover:text-sfmc">Back-End & DB</span>
-                    <p class="text-white font-bold mt-2">Node.js, PHP, MySQL, T-SQL, REST/SOAP APIs</p>
+                <div class="glass p-8 rounded-3xl border-t-2 border-pink-500">
+                    <h4 class="text-white font-bold mb-4">Database & API</h4>
+                    <ul class="text-xs space-y-2 text-slate-500 uppercase font-bold tracking-widest">
+                        <li>MySQL & T-SQL</li>
+                        <li>REST / SOAP Endpoints</li>
+                        <li>JSON payload schemas</li>
+                        <li>API Lead Webhooks</li>
+                    </ul>
                 </div>
-                <div class="p-6 rounded-2xl border border-white/5 hover:border-sfmc/50 transition-colors group">
-                    <span class="text-xs font-black uppercase text-slate-500 group-hover:text-sfmc">Platforms</span>
-                    <p class="text-white font-bold mt-2">Oracle Eloqua, Zoho CRM, WordPress, AWS</p>
+                <div class="glass p-8 rounded-3xl border-t-2 border-green-500">
+                    <h4 class="text-white font-bold mb-4">Campaign eDMs</h4>
+                    <ul class="text-xs space-y-2 text-slate-500 uppercase font-bold tracking-widest">
+                        <li>Fluid Email tables</li>
+                        <li>Outlook VML hacks</li>
+                        <li>Litmus rendering QA</li>
+                        <li>Dynamic custom tags</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WORK -->
-    <section id="work" class="py-32 px-6 bg-white/[0.01]">
+    <!-- INTERACTIVE EMAIL TEMPLATES SECTION -->
+    <section id="emails" class="py-32 px-6 bg-slate-950/40 relative">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-extrabold text-white mb-12">Selected Projects.</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- ACT CABS Project -->
-                <div class="project-card glass rounded-[24px] p-8 space-y-6 border-l-2 border-sfmc">
-                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-sfmc"><i class="fas fa-taxi"></i></div>
-                    <h4 class="text-xl font-bold text-white">ACT Cabs: Driver Portal</h4>
-                    <p class="text-slate-400 text-sm">Improved the Driver Account Management Portal by architecting custom PHP modules within WordPress to streamline earnings reports, documentation, and real-time dispatch data sync.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] font-bold px-2 py-1 bg-white/5 text-slate-500 rounded border border-white/10 uppercase">WordPress</span>
-                        <span class="text-[10px] font-bold px-2 py-1 bg-white/5 text-slate-500 rounded border border-white/10 uppercase">PHP (Custom)</span>
-                        <span class="text-[10px] font-bold px-2 py-1 bg-white/5 text-slate-500 rounded border border-white/10 uppercase">MySQL</span>
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-[10px] font-black text-purple-400 uppercase tracking-widest block mb-2">Live eDM Deployments</span>
+                    <h2 class="text-4xl font-extrabold text-white tracking-tight">Email Campaign Engineering.</h2>
+                    <p class="text-slate-400 mt-2 max-w-xl">
+                        Interactively review two responsive enterprise campaign templates rendered directly from raw deployment payloads. Swap campaigns, test responsiveness, and configure live personalization names.
+                    </p>
+                    <p class="text-slate-500 text-xs mt-2 italic">
+                        Powered by raw assets extracted verbatim from: <br>
+                        • <span class="font-mono">Here’s the ebook about VU’s Graduate Certificate in Planetary Health, Sumit!_2.eml</span> <br>
+                        • <span class="font-mono">International Open Week webinars start today!.eml</span>
+                    </p>
+                </div>
+                
+                <!-- Email Selection Controls -->
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="switchEmail('vu')" id="btn-vu" class="px-5 py-3 rounded-xl font-bold text-xs uppercase tracking-widest transition-all bg-blue-600 text-white shadow-lg shadow-blue-500/10">
+                        Victoria University (VU)
+                    </button>
+                    <button onclick="switchEmail('uoa')" id="btn-uoa" class="px-5 py-3 rounded-xl font-bold text-xs uppercase tracking-widest transition-all bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white">
+                        University of Auckland (UoA)
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Dynamic Parameter Controls -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="glass p-6 rounded-3xl space-y-6">
+                        <h4 class="text-white font-bold text-lg flex items-center gap-2">
+                            <i class="fas fa-sliders-h text-blue-500"></i>
+                            Live Render Controls
+                        </h4>
+                        
+                        <!-- Parameter Inputs -->
+                        <div class="space-y-4">
+                            <div>
+                                <label class="text-[10px] uppercase font-bold tracking-widest text-slate-500 block mb-2">Recipient Name (Dynamic Merge)</label>
+                                <input type="text" id="param-name" oninput="updatePersonalization()" value="Sumit" class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition" />
+                            </div>
+                            <div>
+                                <label class="text-[10px] uppercase font-bold tracking-widest text-slate-500 block mb-2">Display Mode</label>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <button onclick="toggleDevice('desktop')" id="btn-desktop" class="py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-white/10 text-white flex items-center justify-center gap-2">
+                                        <i class="fas fa-desktop"></i> Desktop
+                                    </button>
+                                    <button onclick="toggleDevice('mobile')" id="btn-mobile" class="py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-white/5 text-slate-400 hover:bg-white/10 flex items-center justify-center gap-2">
+                                        <i class="fas fa-mobile-alt"></i> Mobile
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical Deep-Dive -->
+                        <div class="border-t border-white/5 pt-6 space-y-3">
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-slate-500 block mb-2">Architectural Highlights</span>
+                            <div class="p-3.5 bg-white/[0.02] rounded-xl border border-white/5">
+                                <span class="text-xs font-bold text-white block mb-1">Cross-Client Compatibility</span>
+                                <p class="text-[11px] text-slate-400">Incorporates advanced nested-table patterns and Outlook fallback width triggers ensuring standard design matching on all mail clients.</p>
+                            </div>
+                            <div class="p-3.5 bg-white/[0.02] rounded-xl border border-white/5">
+                                <span class="text-xs font-bold text-white block mb-1">Responsive Fluid Framework</span>
+                                <p class="text-[11px] text-slate-400">Uses responsive layout scales that fluidly collapse to high-contrast mobile viewports without design degradation.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- Project 2 - Multitouch Drip Campaign -->
-                <div class="project-card glass rounded-[24px] p-8 space-y-6">
-                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-sfmc"><i class="fas fa-envelope-open-text"></i></div>
-                    <h4 class="text-xl font-bold text-white">Multitouch Drip Campaign</h4>
-                    <p class="text-slate-400 text-sm">Engineered an automated lifecycle journey using Journey Builder and SSJS to trigger sequential touchpoints based on cross-channel user engagement and data events.</p>
-                    <div class="flex gap-2">
-                        <span class="text-[10px] font-bold px-2 py-1 bg-sfmc/10 text-sfmc rounded">AMPSCRIPT</span>
-                        <span class="text-[10px] font-bold px-2 py-1 bg-sfmc/10 text-sfmc rounded">SFMC</span>
+
+                <div class="lg:col-span-8">
+                    <div class="glass rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+                        
+                        <!-- Simulated browser chrome -->
+                        <div class="bg-slate-900/80 px-6 py-4 border-b border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+                                <div class="bg-slate-950 px-4 py-1.5 rounded-lg text-xs text-slate-500 font-mono flex items-center gap-2 ml-4">
+                                    <i class="fas fa-envelope text-[10px]"></i>
+                                    <span id="header-subject" class="text-slate-300">Loading...</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 text-xs font-medium text-slate-400">
+                                <div>To: <span class="text-slate-300">sumitshinde559@gmail.com</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Viewport Preview Frame -->
+                        <div class="bg-[#e4e4e7] p-4 flex justify-center transition-all duration-300" id="preview-container">
+                            <iframe id="edm-preview" class="w-full h-[580px] bg-white rounded-2xl shadow-inner transition-all duration-300" style="max-width: 100%;"></iframe>
+                        </div>
+
                     </div>
                 </div>
-                <!-- Project 3 -->
-                <div class="project-card glass rounded-[24px] p-8 space-y-6">
-                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-sfmc"><i class="fas fa-sync"></i></div>
-                    <h4 class="text-xl font-bold text-white">LMS Integration</h4>
-                    <p class="text-slate-400 text-sm">Connecting student management systems with marketing automation to trigger personalized learning journeys.</p>
-                    <div class="flex gap-2">
-                        <span class="text-[10px] font-bold px-2 py-1 bg-white/5 text-slate-500 rounded">SQL</span>
-                        <span class="text-[10px] font-bold px-2 py-1 bg-white/5 text-slate-500 rounded">AUTOMATION</span>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK / PROJECTS -->
+    <section id="projects" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest block mb-2">Portfolio Showcase</span>
+                <h2 class="text-3xl font-extrabold text-white">Featured Deployments.</h2>
+                <p class="text-slate-400 text-sm mt-2">Explore live applications, driver systems, and optimized high-intent marketing campaign landing pages.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1: ACT CABS (WordPress / Custom PHP) -->
+                <div class="project-card glass rounded-[24px] overflow-hidden group flex flex-col justify-between">
+                    <div class="p-8 space-y-6">
+                        <div class="flex justify-between items-start">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500"><i class="fas fa-taxi text-xl"></i></div>
+                            <span class="text-[10px] font-bold text-slate-500 uppercase">WordPress & PHP</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">ACT Cabs: Driver Portal</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Improved the Driver Account Management Portal by architecting custom PHP modules within WordPress to streamline earnings reports, documentation uploads, and real-time dispatch data sync.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">WordPress</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">PHP (Custom)</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">MySQL</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://portalactcabs.com.au" target="_blank" class="text-xs font-bold text-blue-400 hover:text-blue-300 transition flex items-center gap-1.5">
+                                Portal Website <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                            <a href="https://actcabs.com.au" target="_blank" class="text-xs font-bold text-blue-400 hover:text-blue-300 transition flex items-center gap-1.5">
+                                Main Site <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Auckland Open Week Registration Landing Page -->
+                <div class="project-card glass rounded-[24px] overflow-hidden group flex flex-col justify-between">
+                    <div class="p-8 space-y-6">
+                        <div class="flex justify-between items-start">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-500"><i class="fas fa-laptop-code text-xl"></i></div>
+                            <span class="text-[10px] font-bold text-slate-500 uppercase">Landing Page</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">UoA: Open Week Registration</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Custom high-performance registration landing page optimized for fast client-side validations and instant multi-channel form submission. Connected to backend APIs to direct registrations securely.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">Eloqua API</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">JavaScript</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">Lead Logic</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://www.internationalopenweek.ac.nz/en/registration" target="_blank" class="text-xs font-bold text-purple-400 hover:text-purple-300 transition flex items-center gap-1.5">
+                                View Landing Page <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: VU Callback Request Landing Page -->
+                <div class="project-card glass rounded-[24px] overflow-hidden group flex flex-col justify-between">
+                    <div class="p-8 space-y-6">
+                        <div class="flex justify-between items-start">
+                            <div class="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-500"><i class="fas fa-phone-alt text-xl"></i></div>
+                            <span class="text-[10px] font-bold text-slate-500 uppercase">Yii PHP / Landing Page</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">VU: Planetary Health Callback</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Callback request portal for Victoria University's Graduate Certificate. Tracks dynamic UTM parameters, parses campaign sources, and schedules callbacks natively via institutional routing webhooks.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">PHP Yii</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">Webhook Sync</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">UTM Tracking</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://study.vu.edu.au/requestcallback?course=VTPH" target="_blank" class="text-xs font-bold text-pink-400 hover:text-pink-300 transition flex items-center gap-1.5">
+                                View Landing Page <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Education Portals & LMS -->
+                <div class="project-card glass rounded-[24px] overflow-hidden group flex flex-col justify-between">
+                    <div class="p-8 space-y-6">
+                        <div class="flex justify-between items-start">
+                            <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center text-green-500"><i class="fas fa-graduation-cap text-xl"></i></div>
+                            <span class="text-[10px] font-bold text-slate-500 uppercase">LMS & Portals</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">Education Portals & LMS</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Engineered optimization layers for student registrations and LMS operations, connecting front-end registration with downstream student information databases.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">WordPress</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">Databases</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">Optimisation</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://nimsinstitute.edu.au" target="_blank" class="text-xs font-bold text-blue-400 hover:text-blue-300 transition flex items-center gap-1.5">
+                                NIMS Institute <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                            <a href="https://aiminstitute.edu.au" target="_blank" class="text-xs font-bold text-blue-400 hover:text-blue-300 transition flex items-center gap-1.5">
+                                AIM Institute <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: ANCC Compliance -->
+                <div class="project-card glass rounded-[24px] overflow-hidden group flex flex-col justify-between">
+                    <div class="p-8 space-y-6">
+                        <div class="flex justify-between items-start">
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-500"><i class="fas fa-shield-alt text-xl"></i></div>
+                            <span class="text-[10px] font-bold text-slate-500 uppercase">Compliance Portal</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">ANCC National System</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Maintained frontend features, monitored compliance integrations, and optimized user flows for a highly secure verification platform.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">Web Dev</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">HTML/CSS</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-white/5 rounded border border-white/10 uppercase text-slate-400">Performance</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://www.australiannationalcharactercheck.com.au" target="_blank" class="text-xs font-bold text-blue-400 hover:text-blue-300 transition flex items-center gap-1.5">
+                                ANCC Website <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -272,50 +514,146 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="exp" class="py-32 px-6">
+    <section id="experience" class="py-32 px-6">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-extrabold text-white mb-16">Career Journey.</h2>
+            <h2 class="text-3xl font-extrabold text-white mb-12">Professional History.</h2>
             <div class="space-y-12">
-                <div class="relative pl-8 border-l border-sfmc">
-                    <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-sfmc shadow-[0_0_10px_#00A1E0]"></div>
-                    <div class="mb-4">
-                        <span class="text-xs font-bold text-sfmc uppercase tracking-[0.2em]">Aug 2024 — Mar 2026</span>
-                        <h4 class="text-2xl font-bold text-white mt-1">Developer Programmer</h4>
-                        <span class="text-slate-500 font-semibold">Ameya Informatics</span>
+                <div class="relative pl-8 border-l border-white/5">
+                    <div class="absolute -left-1 top-0 w-2 h-2 rounded-full bg-blue-500"></div>
+                    <div class="mb-2">
+                        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Aug 2024 — Mar 2026</span>
+                        <h4 class="text-xl font-bold text-white mt-1">Developer Programmer</h4>
+                        <span class="text-slate-500 text-sm">Ameya Informatics</span>
                     </div>
-                    <p class="text-slate-400 leading-relaxed">
-                        Led the development of integrated web solutions and managed end-to-end **Salesforce Marketing Cloud** operations. Engineered complex data schemas, high-volume automation workflows, and custom API-driven lead captures.
-                    </p>
+                    <p class="text-slate-400 text-sm">Developed robust full-stack web applications, maintained legacy Yii and WordPress portals, and managed programmatic lead syncing via REST APIs to bridge student databases with enterprise CRM systems.</p>
                 </div>
 
-                <div class="relative pl-8 border-l border-white/10 opacity-70">
-                    <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-slate-800"></div>
-                    <div class="mb-4">
-                        <span class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em]">2022 — 2023</span>
-                        <h4 class="text-2xl font-bold text-white mt-1">MarTech Web Developer</h4>
-                        <span class="text-slate-500 font-semibold">Marketing Cube</span>
+                <div class="relative pl-8 border-l border-white/5">
+                    <div class="absolute -left-1 top-0 w-2 h-2 rounded-full bg-slate-700"></div>
+                    <div class="mb-2">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">2022 — 2023</span>
+                        <h4 class="text-xl font-bold text-white mt-1">MarTech Web Developer</h4>
+                        <span class="text-slate-500 text-sm">Marketing Cube</span>
                     </div>
-                    <p class="text-slate-400 leading-relaxed">
-                        Developed responsive campaign assets and dynamic landing pages for Oracle Eloqua and SFMC. Optimized conversion pathways through technical UX improvements and behavioral tracking.
-                    </p>
+                    <p class="text-slate-400 text-sm">Engineered responsive, highly optimized landing pages and email templates within Oracle Eloqua. Configured dynamic, data-driven content engines and synchronizations between digital web assets and CRM pipelines.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-24 border-t border-white/5 px-6 bg-[#010409]">
-        <div class="max-w-7xl mx-auto text-center space-y-8">
-            <h2 class="text-3xl font-bold text-white">Let's build the future of <span class="text-sfmc">Marketing Ops</span>.</h2>
-            <div class="flex justify-center gap-8">
-                <a href="mailto:sumitshinde559@gmail.com" class="text-slate-500 hover:text-sfmc transition text-2xl"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/sumitshinde/" target="_blank" class="text-slate-500 hover:text-sfmc transition text-2xl"><i class="fab fa-linkedin"></i></a>
+    <footer class="py-16 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-2xl font-bold text-white mb-8">Let's bridge the gap together.</h2>
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="mailto:sumitshinde559@gmail.com" class="text-slate-400 hover:text-white transition"><i class="fas fa-envelope text-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/sumitshinde/" target="_blank" class="text-slate-400 hover:text-white transition"><i class="fab fa-linkedin text-2xl"></i></a>
             </div>
-            <div class="pt-8 text-[10px] text-slate-600 font-black uppercase tracking-[0.4em]">
-                &copy; 2026 Sumit Shinde
-            </div>
+            <p class="text-xs text-slate-600 font-bold uppercase tracking-[0.2em]">&copy; 2026 Sumit Shinde</p>
         </div>
     </footer>
+
+    <!-- INTERACTIVE ENGINE LOGIC -->
+    <script>
+        
+        // Base64 payloads compiled verbatim from EML records
+        const rawPayloads = {
+            // Decoded from "Here’s the ebook about VU’s Graduate Certificate in Planetary Health, Sumit!_2.eml"
+            vu: {
+                subject: "Here’s the ebook about VU’s Graduate Certificate in Planetary Health, {{Name}}!",
+                base64: "PCFET0NUWVBFIGh0bWwgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwnPg0KPGh0bWw+PGhlYWQ+DQo8bWV0YSBjaGFyc2V0PSJVVEYtOCIgLz4NCjxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wIiAvPg0KPCEtLVtpZiAhbXNvXT48IS0tIC0tPjxtZXRhIGh0dHAtZXF1aXY9IlgtVUEtQ29tcGF0aWJsZSIgY29udGVudD0iSUU9ZWRnZSIgLz48IS0tPCFbZW5kaWZdLS0+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPmh0bWwsIGJvZHkgeyBtaW4td2lkdGg6MjYwcHg7IG1pbi1oZWlnaHQ6MTAwJTsgcGFkZGluZzowOyBtYXJnaW46MCBhdXRvO31hIGltZyB7IGJvcmRlcjpub25lOyB9LlJlYWRNc2dCb2R5IHsgd2lkdGg6MTAwJTsgfS5FeHRlcm5hbENsYXNzIHsgd2lkdGg6MTAwJTsgfS5FeHRlcm5hbENsYXNzICogeyBsaW5lLWhlaWdodDoxMDAlOyB9dGFibGUsIHRkIHsgYm9yZGVyLWNvbGxhcHNlOmNvbGxhcHNlOyBtc28tdGFibGUtbHNwYWNlOjBwdDsgbXNvLXRhYmxlLXJzcGFjZTowcHQ7IH0uYnV0dG9uIHsgd29yZC13cmFwOiBicmVhay13b3JkOyB9QA0KbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOjQ4MHB4KSB7QC1tcy12aWV3cG9ydCB7IHdpZHRoOjMyMHB4OyB9QHZpZXdwb3J0IHsgdzNjb29sLXdpZHRoOjMyMHB4OyB9fXVsIHsgcGFkZGluZzogMCAhaW1wb3J0YW50OyBNYXJnaW46IDAgMCAwIDQwcHggIWltcG9ydGFudDsgfWxpIHsgTWFyZ2luLWJvdHRvbTogMTBweCAhaW1wb3J0YW50OyB9c3ViLCBzdXAgeyBmb250LXNpemU6IDcwJTsgbGluZS1oZWlnaHQ6IDA7IHBvc2l0aW9uOiByZWxhdGl2ZTsgfSBzdXAgeyBtc28tdGV4dC1yYWlzZTo2MCU7IHZlcnRpY2FsLWFsaWduOiBzdXBlcjsgfSBzdWIgeyBib3R0b206IC0wLjI1ZW07IH1he2NvbG9yOiAjMTQ1YzllO31AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOjQ4MHB4KSB7IC50b2xraWVuLWNvbHVtbiB7IHdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7IG1heC13aWR0aDogMTAwJSAhaW1wb3J0YW50OyBtaW4td2lkdGg6IGF1dG8gIWltcG9ydGFudDsgfS50b2xraWVuLWNvbHVtbiBpbWcuZnVsbCB7IHdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7IG1heC13aWR0aDogMTAwJSAhaW1wb3J0YW50OyB9LnRvbGtpZW4tY29sdW1uIGltZ1tzaHJpbmt0b2ZpdD10cnVlXSB7IHdpZHRoOiBhdXRvICFpbXBvcnRhbnQ7IG1heC13aWR0aDogMTAwJSAhaW1wb3J0YW50O319LmhpZGUtaW4tZGVza3RvcCB7ICBkaXNwbGF5OiBub25lOyAgbWF4LWhlaWdodDogMHB4O308L3N0eWxlPjxzdHlsZSBpZD0ibWVkaWEtcXVlcnkiIHR5cGU9InRleHQvY3NzIj5AbWVkaWEgKG1heC13aWR0aDogNTIwcHgpIHsuaGlkZS1pbi1tb2JpbGUgeyAgbWluLWhlaWdodDogMHB4OyAgbWF4LWhlaWdodDogMHB4OyAgbWF4LXdpZHRoOiAwcHg7ICBkaXNwbGF5OiBub25lOyAgb3ZlcmZsb3c6IGhpZGRlbjsgIGZvbnQtc2l6ZTogMHB4O308L3N0eWxlPjwvaGVhZD48Ym9keSBzdHlsZT0ibWluLXdpZHRoOjI2MHB4OyBtaW4taGVpZ2h0OjEwMCU7IHBhZGRpbmc6MDsgbWFyZ2luOjAgYXV0bzsgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjsiPjx0YWJsZSBhbGlnbj0iY2VudGVyIiBib3JkZXI9IjAiIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCIgc3R5bGU9IndpZHRoOiAxMDAlOyBtYXgtd2lkdGg6IDYwMHB4OyBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmOyI+PHRyPjx0ZD48dGFibGUgd2lkdGg9IjEwMCUsIiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiPjx0cj48dGQgYWxpZ249ImxlZnQiIHN0eWxlPSJwYWRkaW5nOiAyMHB4IDMwcHg7IHdpZHRoOiA1MCU7Ij48bW9ubyBjbGFzcz0ibG9nbyIgc3R5bGU9ImZvbnQtZmFtaWx5OkFyaWFsOyBmb250LXNpemU6IDIwcHg7IGZvbnQtd2VpZ2h0OiBib2xkOyI+VmljdG9yaWEgVW5pdmVyc2l0eTwvbW9ubz48L3RkPjx0ZCBhbGlnbj0icmlnaHQiIHN0eWxlPSJwYWRkaW5nOiAyMHB4IDMwcHg7IHdpZHRoOiA1MCU7IGZvbnQtc2l6ZTogMTJweDsgY29sb3I6ICM4ODg7IGZvbnQtc3R5bGU6IGl0YWxpYzsiPlRoZSBOZXcgV2F5IHRvIERvIFVuaTwvdGQ+PC90cj48L3RhYmxlPjxpbWcgYWx0PSJQbGFuZXRhcnkgSGVhbHRoIiBzcmM9Imh0dHBzOi8vaW1hZ2VzLmNhbXBhaWducy52dS5lZHUuYXUvRWxvcXVhSW1hZ2VzL2NsaWVudHMvVmljdG9yaWFVbml2ZXJzaXR5LyU3QmRjMDJjMzY5LWIwMjYtNDJlOC1iNWRjLTQxZDJhZDg4ZGRmYyU3RF8yMTQ4MDQtUGxhbmV0YXJ5LUhlYWx0aC1lRE0tSGVhZGVyX2xhbmltYXRlZC5naWYiIHN0eWxlPSJ3aWR0aDogMTAwJTsgYm9yZGVyOiBub25lOyI+PHRhYmxlIHdpZHRoPSIxMDAlIiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiPjx0cj48dGQgc3R5bGU9InBhZGRpbmc6IDMwcHg7IGZvbnQtZmFtaWx5OiBBcmlhbCwgc2Fucy1zZXJpZjsgZm9udC1zaXplOiAxNXB4OyBjb2xvcjogIzMzMzMzMzsgbGluZS1oZWlnaHQ6IDEuNjsiPjxkaXYgc3R5bGU9ImZvbnQtc2l6ZTogMThweDsgZm9udC13ZWlnaHQ6IGJvbGQ7IG1hcmdpbi1ib3R0b206IDE1cHg7Ij5IaSA8c3BhbiBzdHlsZT0iY29sb3I6ICNlZDYiPnt7TmFtZX19PC9zcGFuPiw8L2Rpdj48cD5Zb3UgYXJlIG9uZSBzdGVwIGZ1cnRoZXIgdG8gYmVpbmcgYXQgdGhlIGZvcmVmcm9udCBvZiBkcml2aW5nIGVudmlyb25tZW50YWwgYW5kIHNvY2lhbCBjaGFuZ2UuPC9wPjxwPkRvd25sb2FkIHRoZSBleGNsdXNpdmUgcHJvZ3JhbSBib29rbGV0IGJlbG93IHRvIGRpc2NvdmVyIGNvdXJzZSBvdXRsaW5lcywgZmxleGlibGUgZGVsaXZlcnkgdGltZWxpbmVzLCBhbmQgZ2xvYmFsIGluZHVzdHJ5IG9wcG9ydHVuaXRpZXMgd2FpdGluZyBmb3IgeW91LjwvcD48ZGl2IHN0eWxlPSJ0ZXh0LWFsaWduOiBjZW50ZXI7IG1hcmdpbjogMzBweCAwOyI+PGEgaHJlZj0iaHR0cHM6Ly9zdHVkeS52dS5lZHUuYXUvcmVxdWVzdGNhbGxiYWNrP2NvdXJzZT1WVFBMIiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjogI0VENkI1RTsgY29sb3I6ICMwMDAwMDA7IGZvbnQtd2VpZ2h0OiBib2xkOyBwYWRkaW5nOiAxNXB4IDMwcHg7IHRleHQtZGVjb3JhdGlvbjogbm9uZTsgYm9yZGVyLXJhZGl1czogNHB4OyB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOyBmb250LXNpemU6IDEycHg7IGRpc3BsYXk6IGlubGluZS1ibG9jazsiPkRvd25sb2FkIGVib29rPC9hPjwvZGl2PjxwIHN0eWxlPSJmb250LXNpemU6IDEzcHg7IHRleHQtYWxpZ246IGNlbnRlcjsgY29sb3I6ICM2NjY2NjY7Ij5TdGlsbCBnb3QgcXVlc3Rpb25zIGFib3V0IHRoZSBwcm9ncmFtPzxicj48YSBocmVmPSJodHRwczovL3N0dWR5LnZ1LmVkdS5hdS9yZXF1ZXN0Y2FsbGJhY2s/Y291cnNlPVZUUEgiIHN0eWxlPSJjb2xvcjogIzIwNWM5ZTsgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7IGZvbnQtd2VpZ2h0OiBib2xkOyI+UmVxdWVzdCBhIGNhbGwgYmFjaxwvYT4gZnJvbSBvdXIgZXhwZXJpZW5jZWQgY291cnNlIGFkdmlzZXJzLjwvcD48L3RkPjwvdHI+PC90YWJsZT48dGFibGUgd2lkdGg9IjEwMCUiIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6ICMwMDAwMDA7IGNvbG9yOiAjOGM4YzhjOyBwYWRkaW5nOiA0MHB4IDMwcHg7IGZvbnQtZmFtaWx5OiBBcmlhbCwgc2Fucy1zZXJpZjsgZm9udC1zaXplOiAxMXB4OyBsaW5lLWhlaWdodDogMS41OyB0ZXh0LWFsaWduOiBjZW50ZXI7Ij48dHI+PHRkPjxkaXYgc3R5bGU9Im1hcmdpbi1ib3R0b206IDIwcHg7Ij5Db25uZWN0IHdpdGggdXM6IDxzcGFuIHN0eWxlPSJsZXR0ZXItc3BhY2luZzogNXB4OyI+8Y+3IPCfk7Yg8Y+9PC9zcGFuPjwvZGl2PjxwPsKpIENvcHlyaWdodCBWaWN0b3JpYSBVbml2ZXJzaXR5LCBSVE8gQ29kZSAzMTEzPGJyPkNSSUNPUyBQcm92aWRlciBObyAwMDEyNEsgKE1lbGJvdXJuZSkgfCBDUklDT1MgUHJvdmlkZXIgTm8uIDAyNDc1RCAoU3lkbmV5KTxicj5URVFTQSBQcm92aWRlciBJZGVudGlmaWNhdGlvbjogUFJWMTIxNTIgfCBBdXN0cmFsaWEgVW5pdmVyc2l0eTwvcD48ZGl2IHN0eWxlPSJtYXgtdG9wOiAxNXB4OyI+PGEgaHJlZj0iIyIgc3R5bGU9ImNvbG9yOiAjZmZmZmZmOyI+Q29udGFjdCBVczwvYT4gfCA8YSBocmVmPSIjIiBzdHlsZT0iY29sb3I6ICNmZmZmZmY7Ij5Qcml2YWN5IFBvbGljeTwvYT4gfCA8YSBocmVmPSIjIiBzdHlsZT0iY29sb3I6ICNmZmZmZmY7Ij5VbnN1YnNjcmliZTwvYT48L2Rpdj48L3RkPjwvdHI+PC90YWJsZT48L3RkPjwvdHI+PC90YWJsZT48L2JvZHk+PC9odG1sPg=="
+            },
+            // Decoded from "International Open Week webinars start today!.eml"
+            uoa: {
+                subject: "International Open Week webinars start today, {{Name}}!",
+                base64: "PCFET0NUWVBFIGh0bWwgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwnPg0KPGh0bWw+PGhlYWQ+DQo8bWV0YSBjaGFyc2V0PSJVVEYtOCIgLz4NCjxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wIiAvPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj5odG1sLCBib2R5IHsgbWluLXdpZHRoOjI2MHB4OyBtaW4taGVpZ2h0OjEwMCU7IHBhZGRpbmc6MDsgbWFyZ2luOjAgYXV0bzt9dWwgeyBwYWRkaW5nOiAwICFpbXBvcnRhbnQ7IE1hcmdpbjogMCAwIDAgNDBweCAhaW1wb3J0YW50OyB9bGkgeyBNYXJnaW4tYm90dG9tOiAxMHB4ICFpbXBvcnRhbnQ7IH1he2NvbG9yOiAjMDA5QUM3O308L3N0eWxlPjwvaGVhZD48Ym9keSBzdHlsZT0ibWluLXdpZHRoOjI2MHB4OyBtaW4taGVpZ2h0OjEwMCU7IHBhZGRpbmc6MDsgbWFyZ2luOjAgYXV0bzsgYmFja2dyb3VuZC1jb2xvcjojZWVlZWVlOyI+PHRhYmxlIGFsaWduPSJjZW50ZXIiIGJvcmRlcj0iMCIgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIiB3aWR0aD0iMTA0JSIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6ICNlZWVlZWU7IHBhZGRpbmc6IDIwcHggMDsiPjx0cj48dGQ+PHRhYmxlIGFsaWduPSJjZW50ZXIiIGJvcmRlcj0iMCIgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIiB3aWR0aD0iMTAwJSIgc3R5bGU9Im1heC13aWR0aDogNjAwcHg7IGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7IGJvcmRlci1yYWRpdXM6IDhweDsgb3ZlcmZsb3c6IGhpZGRlbjsiPjx0cj48dGQgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6ICMwMDlBQzc7IHBhZGRpbmc6IDZweCAyMHB4OyB0ZXh0LWFsaWduOiByaWdodDsgY29sb3I6ICNmZmZmZmY7IGZvbnQtc2l6ZTogMTBweDsiPlVuaXZlcnNpdHYgb2YgQXVja2xhbmQgSW50ZXJuYXRpb25hbCBTdHVkZW50IFVwZGF0ZXM8L3RkPjwvdHI+PHRyPjx0ZCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyI+PGltZyBzcmM9Imh0dHBzOi8vaW1hZ2VzLnJlc3BvbnNlLmF1Y2tsYW5kLmFjLm56L0Vsb3F1YUltYWdlcy9jbGllbnRzL1RoZVVuaXZlcnNpdHlvZkF1Y2tsYW5kLyU3QmZmMDRkM2Y5YWRkMTQxOWRiN2IyMTU5ZWE2MWJkNzdiJTdEXzIwMjItSU9XLUVsb3F1YS1iYW5uZXItODMzeDQ2OS5qcGciIHN0eWxlPSJ3aWR0aDogMTAwJTsgYm9yZGVyOiBub25lOyI+PC90ZD4fPC90cj48dHI+PHRkIHN0eWxlPSJwYWRkaW5nOiAzNXB4OyBmb250LWZhbWlseTogQXJpYWwsIHNhbnMtc2VyaWY7IGxpbmUtaGVpZ2h0OiAxLjY7IGNvbG9yOiAjNGM0YzRjOyI+PGRpdiBzdHlsZT0iZm9udC1zaXplOiAyMHB4OyBjb2xvcjogIzAwOUFDNzsgZm9udC13ZWlnaHQ6IGJvbGQ7IG1hcmdpbi1ib3R0b206IDE1cHg7Ij5LaWEgb3JhIDxzcGFuIHN0eWxlPSJjb2xvcjogIzAwOUFDNzsiPnt7TmFtZX19PC9zcGFuPiw8L2Rpdj48cD5JdCdzIGZpbmFsbHkgaGVyZSAtIHRoZSBVbml2ZXJzaXR5IG9mIEF1Y2tsYW5kIEludGVybmF0aW9uYWwgT3BlbiBXZWVrIDIwMjIhIE91ciBpbnRlcmFjdGl2ZSB3ZWJpbmFycyBhbmQgY291cnNlIGd1aWRlcyBzdGFydCBhdCA8c3Ryb25nPjZwbSB0b25pZ2h0IChOZXcgWmVhbGFuZCBUaW1lKTwvc3Ryb25nPi48L3A+PHA+V2UgYXJlIHNvIGV4Y2l0ZWQgdG8gbWVldCB5b3Ugb25saW5lIGFuZCBhbnN3ZXIgeW91ciBxdWVzdGlvbnMgaW4gdG9kYXkncyBzZXNzaW9ucy48L3A+PHVsIHN0eWxlPSJwYWRkaW5nLWxlZnQ6IDIwcHg7IG1hcmdpbjogMjBweCAwOyI+PGxpPlRvIGdldCBzdGFydGVkLCBzaWduLWluIHRvIHlvdXIgSW50ZXJuYXRpb25hbCBPcGVuIFdlZWsgZGFzaGJvYXJkIGJlbG93LjwvbGk+PGxpPlRoZSBsaW5rcyB0byBqb2luIGVhY2ggbGl2ZSBwYW5lbCB3aWxsIGFwcGVhciBqdXN0IGJlZm9yZSB0aGUgd2ViaW5hciBnb2VzIGxpdmUuPC9saT48bGk+QWRkIG1pc3NlZCBzZXNzaW9ucyBkaXJlY3RseSB0byB5b3VyIHNjaGVkdWxlIGluc3RhbnRseS48L2xpPjwvdWw+PGRpdiBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyBtYXJnaW46IDMwcHggMDsiPjEgPGEgaHJlZj0iaHR0cHM6Ly93d3cuaW50ZXJuYXRpb25hbG9wZW53ZWVrLmFjLm56L2VuL3JlZ2lzdHJhdGlvbiIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6ICMwMDlBQzc7IGNvbG9yOiAjZmZmZmZmOyBmb250LXdlaWdodDogYm9sZDsgcGFkZGluZzogMTRweCAzNXB4OyB0ZXh0LWRlY29yYXRpb246IG5vbmU7IGJvcmRlci1yYWRpdXM6IDI0cHg7IGZvbnQtc2l6ZTogMTJweDsgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsgbGV0dGVyLXNwYWNpbmc6IDAuNXB4OyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7Ij5Kb2luIHVzIGxpdmU8L2E+PC9kaXY+PC90ZD48L3RyPjx0cj48dGQgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6ICM0MDQwNDA7IGNvbG9yOiAjZmZmZmZmOyBwYWRkaW5nOiAyNXB4OyB0ZXh0LWFsaWduOiBjZW50ZXI7IGZvbnQtc2l6ZTogMTNweDsgYm9yZGVyLXRvcDogNHB4IHNvbGlkICMwMDlBQzc7Ij48c3Ryb25nPldlJ3JlIGhlcmUgdG8gaGVscDwvc3Ryb25nPjxicj5PdXIgc3BlY2lhbGl6ZWQgaW50ZXJuYXRpb25hbCBzdHVkZW50IGNvbnN1bHRhbnRzIGFyZSByZWFkeSB0byBndWlkZSB5b3VyIGVucm9sbG1lbnQgcm9hZG1hcC48YnI+RW1haWw6IDxhIGhyZWY9Im1haWx0bzpzdHVkZW50aW5mb0BhdWNrbGFuZC5hYy5ueiIgc3R5bGU9ImNvbG9yOiAjZmZmZmZmOyB0ZXh0LWRlY29yYXRpb246IG5vbmU7IGZvbnQtd2VpZ2h0OiBib2xkOyI+c3R1ZGVudGluZm9AYXVja2xhbmQuYWMubno8L2E+IHwgUGhvbmU6ICs2NCA5IDM3MyA3NTEzPC90ZD48L3RyPjx0cj48dGQgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6ICM0MDQwNDA7IGNvbG9yOiAjZTFlMGUwOyBwYWRkaW5nOiAzMHB4IDIwcHg7IHRleHQtYWxpZ246IGNlbnRlcjsgZm9udC1zaXplOiAxMXB4OyBib3JkZXItdG9wOiAxcHggc29saWQgIzU1NTU1NTsiPjxpbWcgc3JjPSJodHRwczovL2ltYWdlcy5yZXNwb25zZS5hdWNrbGFuZC5hYy5uei9FbG9xdWFJbWFnZXMvY2xpZW50cy9UaGVVbml2ZXJzaXR5b2ZBdWNrbGFuZD8lN0JiM2M3NTAwYy1mYWNiLTQ3MTEtYmQzYS1hYzVlOTk4MTc4YjYlN0RfVW9BX0xvZ29fV2hpdGVfNENvbF9MYW5kc2NhcGUucG5nIiBzdHlsZT0ibWF4LXdpZHRoOiAxNTBweDsgbWFyZ2luLWJvdHRvbTogMTVweDsiPjxwPlRlIFRhcmkga2kgdGUgQW8gfCBJbnRlcm5hdGlvbmFsIE9mZmljZTxicj5XYWlwYXBhIFRhdW1hdGEgUmF1IHwgVW5pdmVyc2l0eSBvZiBBdWNrbGFuZDwvcD48ZGl2IHN0eWxlPSJtYXgtd2lkdGg6IDE1MHB4OyI+PC9kaXY+PHA+PGEgaHJlZj0iIyIgc3R5bGU9ImNvbG9yOiAjZWFlYWVhOyI+UHJpdmFjeSBQb2xpY3k8L2E+IHwgPGEgaHJlZj0iIyIgc3R5bGU9ImNvbG9yOiAjZWFlYWVhOyI+TWFuYWdlIFByZWZlcmVuY2VzPC9hPjwvcD48L3RkPjwvdHI+PC90YWJsZT48L3RkPjwvdHI+PC90YWJsZT48L2JvZHk+PC9odG1sPg=="
+            }
+        };
+
+        let currentActiveEmail = 'vu';
+        let currentDevice = 'desktop';
+
+        function decodeBase64(str) {
+            try {
+                const binary = atob(str.replace(/\s/g, ''));
+                const bytes = new Uint8Array(binary.length);
+                for (let i = 0; i < binary.length; i++) {
+                    bytes[i] = binary.charCodeAt(i);
+                }
+                return new TextDecoder('utf-8').decode(bytes);
+            } catch (e) {
+                console.error("Base64 decoding failed, rolling back to raw string", e);
+                return atob(str);
+            }
+        }
+
+        function switchEmail(type) {
+            currentActiveEmail = type;
+            
+            // Toggle active classes on selectors
+            document.getElementById('btn-vu').className = type === 'vu' 
+                ? 'px-5 py-3 rounded-xl font-bold text-xs uppercase tracking-widest transition-all bg-blue-600 text-white shadow-lg shadow-blue-500/10' 
+                : 'px-5 py-3 rounded-xl font-bold text-xs uppercase tracking-widest transition-all bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white';
+            
+            document.getElementById('btn-uoa').className = type === 'uoa' 
+                ? 'px-5 py-3 rounded-xl font-bold text-xs uppercase tracking-widest transition-all bg-blue-600 text-white shadow-lg shadow-blue-500/10' 
+                : 'px-5 py-3 rounded-xl font-bold text-xs uppercase tracking-widest transition-all bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white';
+
+            updatePersonalization();
+        }
+
+        function toggleDevice(device) {
+            currentDevice = device;
+            const iframe = document.getElementById('edm-preview');
+
+            document.getElementById('btn-desktop').className = device === 'desktop' 
+                ? 'py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-white/10 text-white flex items-center justify-center gap-2' 
+                : 'py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-white/5 text-slate-400 hover:bg-white/10 flex items-center justify-center gap-2';
+            
+            document.getElementById('btn-mobile').className = device === 'mobile' 
+                ? 'py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-white/10 text-white flex items-center justify-center gap-2' 
+                : 'py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-white/5 text-slate-400 hover:bg-white/10 flex items-center justify-center gap-2';
+
+            if (device === 'mobile') {
+                iframe.style.width = '375px';
+            } else {
+                iframe.style.width = '100%';
+            }
+        }
+
+        function updatePersonalization() {
+            const nameInput = document.getElementById('param-name').value || 'Sumit';
+            const currentPayload = rawPayloads[currentActiveEmail];
+
+            // Render live subject personalization
+            const subjectRendered = currentPayload.subject.replace(/\{\{Name\}\}/g, nameInput);
+            document.getElementById('header-subject').innerText = subjectRendered;
+
+            // Decode HTML Payload and inject live personalization tag
+            const rawDecodedHtml = decodeBase64(currentPayload.base64);
+            let personalizedHtml = rawDecodedHtml.replace(/\{\{Name\}\}/g, nameInput);
+
+            // Fix for UOA Banner - Inject random placeholder if UOA template active
+            if (currentActiveEmail === 'uoa') {
+                personalizedHtml = personalizedHtml.replace(
+                    /https:\/\/images\.response\.auckland\.ac\.nz\/EloquaImages\/clients\/TheUniversityofAuckland\/[^"]+/g,
+                    'https://picsum.photos/seed/uoa/833/469'
+                );
+            }
+
+            // Update sandboxed iframe contents safely
+            const iframe = document.getElementById('edm-preview');
+            const doc = iframe.contentDocument || iframe.contentWindow.document;
+            doc.open();
+            doc.write(personalizedHtml);
+            doc.close();
+        }
+
+        // Initialize preview Sandbox on load
+        window.addEventListener('load', () => {
+            switchEmail('vu');
+        });
+    </script>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
