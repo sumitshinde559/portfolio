@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-AU">
+<html lang="en-AU" class="scroll-smooth scroll-pt-20 motion-reduce:scroll-auto">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/schibsted-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/tailwind.css">
   <script>
     (function () {
       var t = null;
@@ -26,229 +26,202 @@
     })();
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Sumit Shinde","jobTitle":"Web and MarTech developer","email":"mailto:sumitshinde559@gmail.com","sameAs":["https://www.linkedin.com/in/sumitshinde/"],"knowsAbout":["Oracle Eloqua","Email development","Landing pages","PHP","WordPress","Yii","MySQL","Zoho CRM"]}
+  {"@context":"https://schema.org","@type":"Person","name":"Sumit Shinde","jobTitle":"MarTech developer","email":"mailto:sumitshinde559@gmail.com","sameAs":["https://www.linkedin.com/in/sumitshinde/"],"knowsAbout":["Oracle Eloqua","Email development","Landing pages","PHP","WordPress","Yii","MySQL","Zoho CRM"]}
   </script>
 </head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
+<body class="overflow-x-hidden bg-paper font-sans text-[1.0625rem] leading-[1.6] text-ink antialiased">
+  <a class="absolute -top-16 left-4 z-[100] rounded-lg bg-ink px-4 py-2.5 text-paper focus:top-4" href="#main">Skip to content</a>
 
-  <header class="site-header" id="top">
-    <div class="wrap header-row">
-      <a class="wordmark" href="#top" aria-label="Sumit Shinde, back to top">
-        <span class="wordmark-mark" aria-hidden="true">{S}</span>
+  <header class="site-header sticky top-0 z-50 border-b border-transparent bg-paper/90 backdrop-blur-md transition-colors [&.is-scrolled]:border-rule" id="top">
+    <div class="relative mx-auto flex min-h-[4.25rem] w-full max-w-wrap items-center gap-6 px-[clamp(1rem,4vw,2.5rem)]">
+      <a class="inline-flex items-center gap-2.5 whitespace-nowrap text-[1.1rem] font-bold tracking-[-0.01em] text-ink no-underline" href="#top" aria-label="Sumit Shinde, back to top">
+        <span class="grid h-8 w-8 place-items-center rounded-[7px] bg-mint font-mono text-[0.8rem] tracking-[-0.04em] text-[#0e1e25]" aria-hidden="true">{S}</span>
         Sumit Shinde
       </a>
-      <nav class="nav" id="nav" aria-label="Main">
-        <a href="#martech">MarTech skills</a>
-        <a href="#emails">Emails</a>
-        <a href="#work">Websites</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+      <nav class="absolute inset-x-0 top-full hidden flex-col border-b border-rule bg-paper px-[clamp(1rem,4vw,2.5rem)] pb-5 pt-2 [&.is-open]:flex min-[821px]:static min-[821px]:ml-auto min-[821px]:flex min-[821px]:flex-row min-[821px]:gap-7 min-[821px]:border-0 min-[821px]:bg-transparent min-[821px]:p-0" id="nav" aria-label="Main">
+        <a class="border-b border-rule py-3.5 text-lg text-ink no-underline hover:text-ink min-[821px]:border-0 min-[821px]:py-2 min-[821px]:text-[0.98rem] min-[821px]:font-medium min-[821px]:text-muted" href="#martech">MarTech skills</a>
+        <a class="border-b border-rule py-3.5 text-lg text-ink no-underline hover:text-ink min-[821px]:border-0 min-[821px]:py-2 min-[821px]:text-[0.98rem] min-[821px]:font-medium min-[821px]:text-muted" href="#emails">Emails</a>
+        <a class="border-b border-rule py-3.5 text-lg text-ink no-underline hover:text-ink min-[821px]:border-0 min-[821px]:py-2 min-[821px]:text-[0.98rem] min-[821px]:font-medium min-[821px]:text-muted" href="#work">Websites</a>
+        <a class="border-b border-rule py-3.5 text-lg text-ink no-underline hover:text-ink min-[821px]:border-0 min-[821px]:py-2 min-[821px]:text-[0.98rem] min-[821px]:font-medium min-[821px]:text-muted" href="#experience">Experience</a>
+        <a class="border-b border-rule py-3.5 text-lg text-ink no-underline hover:text-ink min-[821px]:border-0 min-[821px]:py-2 min-[821px]:text-[0.98rem] min-[821px]:font-medium min-[821px]:text-muted" href="#contact">Contact</a>
       </nav>
-      <div class="header-actions">
-        <button class="icon-btn theme-btn" type="button" id="theme-btn" aria-label="Switch to dark mode">
-          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
-          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a6.8 6.8 0 0 0 10.7 10.7Z"/></svg>
+      <div class="ml-auto flex items-center gap-2 min-[821px]:ml-0">
+        <button class="grid h-11 w-11 place-items-center rounded-full border border-rule bg-surface text-ink hover:border-ink" type="button" id="theme-btn" aria-label="Switch to dark mode">
+          <svg class="h-[1.15rem] w-[1.15rem] dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+          <svg class="hidden h-[1.15rem] w-[1.15rem] dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a6.8 6.8 0 0 0 10.7 10.7Z"/></svg>
         </button>
-        <a class="btn btn-primary header-cta" href="mailto:sumitshinde559@gmail.com">Email me</a>
-        <button class="icon-btn menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <a class="inline-flex min-h-11 items-center justify-center rounded-full bg-teal px-[1.1rem] py-2.5 text-base font-semibold leading-none text-teal-on no-underline transition-colors hover:bg-teal-hover max-[420px]:hidden" href="mailto:sumitshinde559@gmail.com">Email me</a>
+        <button class="grid h-11 w-11 place-items-center rounded-full border border-rule bg-surface text-ink hover:border-ink min-[821px]:hidden" type="button" id="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+          <svg class="h-[1.15rem] w-[1.15rem]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap">
-        <h1 id="hero-title">Hi <span class="merge"><input class="merge-input is-token" id="name" type="text" value="{{FirstName}}" maxlength="18" autocomplete="given-name" spellcheck="false" aria-label="Your first name. It fills in the emails further down the page."><span class="merge-sizer" aria-hidden="true"></span></span>, I build the emails, landing pages and CRM syncs behind marketing campaigns.</h1>
-        <p class="hero-hint"><code>{{FirstName}}</code> <span>is a merge field. Type your name into the highlighted box and the campaign emails below will greet you by it.</span></p>
+    <section class="pb-[clamp(3.5rem,8vw,6.5rem)] pt-[clamp(3rem,9vw,7.5rem)]" aria-labelledby="hero-title">
+      <div class="mx-auto w-full max-w-wrap px-[clamp(1rem,4vw,2.5rem)]">
+        <h1 id="hero-title" class="max-w-[17ch] text-[clamp(2.2rem,6.6vw,5.4rem)] font-bold leading-[1.04] tracking-[-0.035em]">Hi <span class="relative inline-block"><input class="merge-input is-token m-0 w-[4ch] min-w-[1.6ch] max-w-[11ch] rounded-[0.14em] border-0 bg-mint px-[0.16em] font-sans text-[length:1em] font-bold leading-[1.12] tracking-[inherit] text-[color:#0e1e25] shadow-[inset_0_-0.08em_0_rgb(11_117_118/35%)] placeholder:text-[#0e1e25]/50 [&.is-token]:font-mono [&.is-token]:text-[length:0.78em] [&.is-token]:font-medium [&.is-token]:tracking-[-0.06em]" id="name" type="text" value="{{FirstName}}" maxlength="18" autocomplete="given-name" spellcheck="false" aria-label="Your first name. It fills in the emails further down the page."><span class="merge-sizer invisible absolute left-0 top-0 whitespace-pre px-[0.16em]" aria-hidden="true"></span></span>, I build the emails, landing pages and CRM syncs behind marketing campaigns.</h1>
+        <p class="mt-[1.4rem] max-w-[58ch] text-[0.98rem] text-muted"><code class="whitespace-nowrap rounded bg-mint px-1.5 py-0.5 font-mono text-[0.82rem] text-[#0e1e25]">{{FirstName}}</code> is a merge field. Type your name into the highlighted box and the campaign emails below will greet you by it.</p>
 
-        <div class="hero-body">
-          <p>I'm Sumit Shinde, a MarTech developer who sits between engineering and marketing. I code responsive emails and landing pages in Oracle Eloqua, build PHP and WordPress sites, and connect forms to CRMs so every enquiry reaches the right team.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#emails">See the emails</a>
-            <a class="btn btn-ghost" href="#martech">See my MarTech skills</a>
+        <div class="mt-[clamp(2.25rem,5vw,3.5rem)] grid justify-items-start gap-7">
+          <p class="max-w-[36rem] text-[1.2rem] leading-[1.55]">I'm Sumit Shinde, a MarTech developer who sits between engineering and marketing. I code responsive emails and landing pages in Oracle Eloqua, build PHP and WordPress sites, and connect forms to CRMs so every enquiry reaches the right team.</p>
+          <div class="flex flex-wrap gap-3">
+            <a class="inline-flex min-h-12 items-center justify-center rounded-full border-[1.5px] border-transparent bg-teal px-[1.4rem] py-3 text-base font-semibold leading-none text-teal-on no-underline transition-colors hover:bg-teal-hover" href="#emails">See the emails</a>
+            <a class="inline-flex min-h-12 items-center justify-center rounded-full border-[1.5px] border-ink px-[1.4rem] py-3 text-base font-semibold leading-none text-ink no-underline transition-colors hover:bg-ink hover:text-paper" href="#martech">See my MarTech skills</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="martech" aria-labelledby="martech-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="martech-title">MarTech skills</h2>
-          <p>I work across the whole campaign journey, from the email someone opens to the CRM record the sales team picks up.</p>
+    <section class="border-t border-rule py-[clamp(4rem,9vw,7rem)]" id="martech" aria-labelledby="martech-title">
+      <div class="mx-auto w-full max-w-wrap px-[clamp(1rem,4vw,2.5rem)]">
+        <div class="mb-[clamp(2.25rem,5vw,3.5rem)] grid max-w-[46rem] gap-4">
+          <h2 id="martech-title" class="text-[clamp(2rem,4.2vw,3rem)] font-bold leading-[1.1] tracking-[-0.03em]">MarTech skills</h2>
+          <p class="max-w-[40rem] text-[1.12rem] text-muted">I work across the whole campaign journey, from the email someone opens to the CRM record the sales team picks up.</p>
         </div>
-        <ol class="journey">
-          <li class="stage-card">
-            <h3>Campaign emails</h3>
-            <p>Responsive Eloqua emails that render in Outlook, Gmail and on phones, personalised for each contact.</p>
-            <ul class="tools" aria-label="Skills"><li>Oracle Eloqua</li><li>Fluid table layouts</li><li>Outlook VML fallbacks</li><li>Dynamic content</li><li>Merge fields</li><li>Litmus QA</li></ul>
+        <ol class="grid grid-cols-1 gap-4 min-[601px]:grid-cols-2 min-[981px]:grid-cols-4">
+          <li class="relative grid content-start gap-3 rounded-[18px] bg-tint px-[1.35rem] pb-[1.6rem] pt-6">
+            <span class="grid h-9 w-9 place-items-center rounded-full bg-teal font-bold text-teal-on" aria-hidden="true">1</span>
+            <h3 class="text-[1.25rem] font-bold leading-tight tracking-[-0.01em]">Campaign emails</h3>
+            <p class="text-base text-muted">Responsive Eloqua emails that render in Outlook, Gmail and on phones, personalised for each contact.</p>
+            <ul class="mt-1 flex flex-wrap gap-1.5" aria-label="Skills"><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Oracle Eloqua</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Fluid table layouts</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Outlook VML fallbacks</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Dynamic content</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Merge fields</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Litmus QA</li></ul>
           </li>
-          <li class="stage-card">
-            <h3>Landing pages</h3>
-            <p>Fast, focused pages that turn a click into an enquiry, with tracking on every visit.</p>
-            <ul class="tools" aria-label="Skills"><li>Eloqua landing pages</li><li>Landing page optimisation</li><li>UTM tracking</li><li>Form validation</li></ul>
+          <li class="relative grid content-start gap-3 rounded-[18px] bg-tint px-[1.35rem] pb-[1.6rem] pt-6 before:absolute before:bg-teal before:content-[''] max-[600px]:before:-top-4 max-[600px]:before:left-[2.45rem] max-[600px]:before:h-4 max-[600px]:before:w-0.5 min-[601px]:before:-left-4 min-[601px]:before:top-[2.6rem] min-[601px]:before:h-0.5 min-[601px]:before:w-4">
+            <span class="grid h-9 w-9 place-items-center rounded-full bg-teal font-bold text-teal-on" aria-hidden="true">2</span>
+            <h3 class="text-[1.25rem] font-bold leading-tight tracking-[-0.01em]">Landing pages</h3>
+            <p class="text-base text-muted">Fast, focused pages that turn a click into an enquiry, with tracking on every visit.</p>
+            <ul class="mt-1 flex flex-wrap gap-1.5" aria-label="Skills"><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Eloqua landing pages</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Landing page optimisation</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">UTM tracking</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Form validation</li></ul>
           </li>
-          <li class="stage-card">
-            <h3>Forms and lead capture</h3>
-            <p>Forms with processing rules that check, clean and route each submission.</p>
-            <ul class="tools" aria-label="Skills"><li>Eloqua forms</li><li>Form processing rules</li><li>Zoho Forms</li><li>Webhooks</li></ul>
+          <li class="relative grid content-start gap-3 rounded-[18px] bg-tint px-[1.35rem] pb-[1.6rem] pt-6 before:absolute before:bg-teal before:content-[''] max-[600px]:before:-top-4 max-[600px]:before:left-[2.45rem] max-[600px]:before:h-4 max-[600px]:before:w-0.5 min-[981px]:before:-left-4 min-[981px]:before:top-[2.6rem] min-[981px]:before:h-0.5 min-[981px]:before:w-4 min-[601px]:max-[980px]:before:hidden">
+            <span class="grid h-9 w-9 place-items-center rounded-full bg-teal font-bold text-teal-on" aria-hidden="true">3</span>
+            <h3 class="text-[1.25rem] font-bold leading-tight tracking-[-0.01em]">Forms and lead capture</h3>
+            <p class="text-base text-muted">Forms with processing rules that check, clean and route each submission.</p>
+            <ul class="mt-1 flex flex-wrap gap-1.5" aria-label="Skills"><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Eloqua forms</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Form processing rules</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Zoho Forms</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Webhooks</li></ul>
           </li>
-          <li class="stage-card">
-            <h3>CRM sync</h3>
-            <p>API integrations that put each lead in the right CRM fields, so sales get a clean record.</p>
-            <ul class="tools" aria-label="Skills"><li>Zoho CRM</li><li>REST and SOAP APIs</li><li>JSON payload mapping</li><li>Lead routing</li></ul>
+          <li class="relative grid content-start gap-3 rounded-[18px] bg-tint px-[1.35rem] pb-[1.6rem] pt-6 before:absolute before:bg-teal before:content-[''] max-[600px]:before:-top-4 max-[600px]:before:left-[2.45rem] max-[600px]:before:h-4 max-[600px]:before:w-0.5 min-[601px]:before:-left-4 min-[601px]:before:top-[2.6rem] min-[601px]:before:h-0.5 min-[601px]:before:w-4">
+            <span class="grid h-9 w-9 place-items-center rounded-full bg-teal font-bold text-teal-on" aria-hidden="true">4</span>
+            <h3 class="text-[1.25rem] font-bold leading-tight tracking-[-0.01em]">CRM sync</h3>
+            <p class="text-base text-muted">API integrations that put each lead in the right CRM fields, so sales get a clean record.</p>
+            <ul class="mt-1 flex flex-wrap gap-1.5" aria-label="Skills"><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Zoho CRM</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">REST and SOAP APIs</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">JSON payload mapping</li><li class="rounded-full bg-surface px-2.5 py-1 text-[0.88rem]">Lead routing</li></ul>
           </li>
         </ol>
-        <div class="webdev">
-          <div><h3>Web development</h3><p>The code underneath the campaigns.</p></div>
-          <ul class="tools" aria-label="Web development skills"><li>HTML5 and CSS3</li><li>JavaScript (ES6+)</li><li>PHP</li><li>WordPress</li><li>Yii</li><li>MySQL</li><li>T-SQL</li><li>Tailwind</li><li>Bootstrap</li></ul>
+        <div class="mt-10 grid items-start gap-x-10 gap-y-4 border-t border-rule pt-8 min-[601px]:grid-cols-[minmax(0,15rem)_minmax(0,1fr)]">
+          <div><h3 class="text-[1.2rem] font-bold">Web development</h3><p class="mt-1.5 text-[0.98rem] text-muted">The code underneath the campaigns.</p></div>
+          <ul class="flex flex-wrap gap-1.5" aria-label="Web development skills"><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">HTML5 and CSS3</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">JavaScript (ES6+)</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">PHP</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">WordPress</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">Yii</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">MySQL</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">T-SQL</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">Tailwind</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">Bootstrap</li></ul>
         </div>
       </div>
     </section>
 
-    <section class="section alt" id="emails" aria-labelledby="emails-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="emails-title">Campaign emails I've built</h2>
-          <p>Two Oracle Eloqua emails from university campaigns. Open each one, check it at phone width, and change the name in the greeting at the top of the page.</p>
+    <section class="border-t border-rule bg-sunken py-[clamp(4rem,9vw,7rem)]" id="emails" aria-labelledby="emails-title">
+      <div class="mx-auto w-full max-w-wrap px-[clamp(1rem,4vw,2.5rem)]">
+        <div class="mb-[clamp(2.25rem,5vw,3.5rem)] grid max-w-[46rem] gap-4">
+          <h2 id="emails-title" class="text-[clamp(2rem,4.2vw,3rem)] font-bold leading-[1.1] tracking-[-0.03em]">Campaign emails I've built</h2>
+          <p class="max-w-[40rem] text-[1.12rem] text-muted">Two Oracle Eloqua emails from university campaigns. Open each one, check it at phone width, and change the name in the greeting at the top of the page.</p>
         </div>
 
-        <div class="mail">
-          <div class="inbox">
-            <div class="inbox-title"><h3>Inbox</h3><span>2 emails</span></div>
-            <ul class="inbox-list" role="tablist" aria-label="Emails">
+        <div class="grid overflow-hidden rounded-[18px] border border-rule bg-surface shadow-card min-[921px]:grid-cols-[19rem_minmax(0,1fr)]">
+          <div class="border-b border-rule min-[921px]:border-b-0 min-[921px]:border-r">
+            <div class="flex items-baseline justify-between border-b border-rule px-5 pb-3.5 pt-[1.1rem]"><h3 class="text-[1.05rem] font-bold">Inbox</h3><span class="text-[0.85rem] text-muted">2 emails</span></div>
+            <ul class="grid grid-cols-2 min-[921px]:grid-cols-1" role="tablist" aria-label="Emails">
               <li role="presentation">
-                <button class="msg" type="button" role="tab" id="tab-vu" data-email="vu" aria-selected="true" aria-controls="reader">
-                  <span class="msg-from">Victoria University</span>
-                  <span class="msg-subject" data-subject="vu"></span>
-                  <span class="msg-preview">You are one step further to being at the forefront of driving environmental and social change.</span>
+                <button class="msg relative grid h-full w-full content-start gap-1 bg-transparent px-[0.9rem] pb-4 pt-[0.85rem] text-left text-ink hover:bg-sunken aria-selected:bg-tint aria-selected:before:absolute aria-selected:before:inset-x-0 aria-selected:before:bottom-0 aria-selected:before:h-1 aria-selected:before:bg-teal aria-selected:before:content-[''] min-[521px]:px-5 min-[521px]:pl-6 min-[921px]:border-b min-[921px]:border-rule min-[921px]:aria-selected:before:inset-x-auto min-[921px]:aria-selected:before:left-0 min-[921px]:aria-selected:before:top-0 min-[921px]:aria-selected:before:h-auto min-[921px]:aria-selected:before:w-1" type="button" role="tab" id="tab-vu" data-email="vu" aria-selected="true" aria-controls="reader">
+                  <span class="text-[0.92rem] font-bold min-[521px]:text-[0.98rem]">Victoria University</span>
+                  <span class="msg-subject text-[0.85rem] leading-[1.35] min-[521px]:text-[0.93rem]"></span>
+                  <span class="line-clamp-2 hidden text-[0.86rem] leading-[1.4] text-muted min-[921px]:block">You are one step further to being at the forefront of driving environmental and social change.</span>
                 </button>
               </li>
-              <li role="presentation">
-                <button class="msg" type="button" role="tab" id="tab-uoa" data-email="uoa" aria-selected="false" aria-controls="reader" tabindex="-1">
-                  <span class="msg-from">University of Auckland</span>
-                  <span class="msg-subject" data-subject="uoa"></span>
-                  <span class="msg-preview">It's finally here: the University of Auckland International Open Week 2022.</span>
+              <li role="presentation" class="border-l border-rule min-[921px]:border-l-0">
+                <button class="msg relative grid h-full w-full content-start gap-1 bg-transparent px-[0.9rem] pb-4 pt-[0.85rem] text-left text-ink hover:bg-sunken aria-selected:bg-tint aria-selected:before:absolute aria-selected:before:inset-x-0 aria-selected:before:bottom-0 aria-selected:before:h-1 aria-selected:before:bg-teal aria-selected:before:content-[''] min-[521px]:px-5 min-[521px]:pl-6 min-[921px]:border-b min-[921px]:border-rule min-[921px]:aria-selected:before:inset-x-auto min-[921px]:aria-selected:before:left-0 min-[921px]:aria-selected:before:top-0 min-[921px]:aria-selected:before:h-auto min-[921px]:aria-selected:before:w-1" type="button" role="tab" id="tab-uoa" data-email="uoa" aria-selected="false" aria-controls="reader" tabindex="-1">
+                  <span class="text-[0.92rem] font-bold min-[521px]:text-[0.98rem]">University of Auckland</span>
+                  <span class="msg-subject text-[0.85rem] leading-[1.35] min-[521px]:text-[0.93rem]"></span>
+                  <span class="line-clamp-2 hidden text-[0.86rem] leading-[1.4] text-muted min-[921px]:block">It's finally here: the University of Auckland International Open Week 2022.</span>
                 </button>
               </li>
             </ul>
           </div>
 
-          <div class="reader" id="reader" role="tabpanel" aria-labelledby="tab-vu">
-            <div class="reader-head">
-              <div class="reader-meta">
-                <div class="reader-subject" id="reader-subject"></div>
-                <div class="reader-to">To <strong id="reader-to"></strong></div>
+          <div class="grid min-w-0 grid-rows-[auto_1fr]" id="reader" role="tabpanel" aria-labelledby="tab-vu">
+            <div class="flex flex-wrap items-start justify-between gap-x-6 gap-y-4 border-b border-rule p-4 min-[521px]:px-[1.4rem] min-[521px]:py-[1.1rem]">
+              <div class="min-w-0 flex-[1_1_18rem]">
+                <div class="text-[1.15rem] font-bold leading-[1.3] tracking-[-0.01em]" id="reader-subject"></div>
+                <div class="mt-1 text-[0.9rem] text-muted">To <strong class="font-semibold text-ink" id="reader-to"></strong></div>
               </div>
-              <div class="segmented" role="group" aria-label="Preview width">
-                <button type="button" data-device="desktop" aria-pressed="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+              <div class="inline-flex rounded-full border border-rule bg-sunken p-[3px] max-[520px]:hidden" role="group" aria-label="Preview width">
+                <button class="inline-flex min-h-10 items-center gap-1.5 rounded-full px-4 text-[0.9rem] font-semibold text-muted aria-pressed:bg-surface aria-pressed:text-ink aria-pressed:shadow" type="button" data-device="desktop" aria-pressed="true">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
                   Desktop
                 </button>
-                <button type="button" data-device="phone" aria-pressed="false">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
+                <button class="inline-flex min-h-10 items-center gap-1.5 rounded-full px-4 text-[0.9rem] font-semibold text-muted aria-pressed:bg-surface aria-pressed:text-ink aria-pressed:shadow" type="button" data-device="phone" aria-pressed="false">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
                   Phone
                 </button>
               </div>
             </div>
-            <div class="stage" id="stage">
-              <iframe id="email-frame" title="Email preview" sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox" scrolling="no"></iframe>
+            <div class="group flex min-w-0 justify-center bg-tint p-2 min-[521px]:p-[clamp(0.75rem,2vw,1.5rem)]" id="stage">
+              <iframe id="email-frame" title="Email preview" sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox" scrolling="no" class="block h-[640px] min-h-[420px] w-full max-w-full rounded-[10px] border-0 bg-white shadow-sm transition-[width] duration-300 motion-reduce:transition-none group-[.is-phone]:w-[375px] group-[.is-phone]:max-w-full group-[.is-phone]:rounded-[28px] group-[.is-phone]:border-[10px] group-[.is-phone]:border-[#0e1e25]"></iframe>
             </div>
           </div>
         </div>
 
-        <dl class="mail-notes" id="mail-notes"></dl>
+        <dl class="mt-8 grid gap-x-10 gap-y-6 min-[921px]:grid-cols-3 [&>div]:grid [&>div]:content-start [&>div]:gap-1.5 [&_dd]:m-0 [&_dd]:text-muted [&_dt]:font-bold" id="mail-notes"></dl>
       </div>
     </section>
 
-    <section class="section" id="work" aria-labelledby="work-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="work-title">Websites and landing pages</h2>
-          <p>Live sites I've built or looked after, from a taxi company's driver portal to university registration pages.</p>
+    <section class="border-t border-rule py-[clamp(4rem,9vw,7rem)]" id="work" aria-labelledby="work-title">
+      <div class="mx-auto w-full max-w-wrap px-[clamp(1rem,4vw,2.5rem)]">
+        <div class="mb-[clamp(2.25rem,5vw,3.5rem)] grid max-w-[46rem] gap-4">
+          <h2 id="work-title" class="text-[clamp(2rem,4.2vw,3rem)] font-bold leading-[1.1] tracking-[-0.03em]">Websites and landing pages</h2>
+          <p class="max-w-[40rem] text-[1.12rem] text-muted">Live sites I've built or looked after, from a taxi company's driver portal to university registration pages.</p>
         </div>
 
-        <ul class="projects">
-          <li class="project">
-            <div class="project-name"><h3>ACT Cabs</h3><p class="project-kind">Driver portal, WordPress and PHP</p></div>
-            <div class="project-body">
-              <p>Improved the driver account portal with custom PHP modules inside WordPress, so drivers can see earnings reports, upload documents and get dispatch data as it changes.</p>
-              <ul class="tools" aria-label="Built with"><li>WordPress</li><li>Custom PHP</li><li>MySQL</li></ul>
-            </div>
-            <ul class="project-links">
-              <li><a href="https://portalactcabs.com.au" target="_blank" rel="noopener">Driver portal<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="visually-hidden">(opens in a new tab)</span></a></li>
-              <li><a href="https://actcabs.com.au" target="_blank" rel="noopener">Main website<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="visually-hidden">(opens in a new tab)</span></a></li>
-            </ul>
+        <ul class="border-t border-rule">
+          <li class="grid gap-x-10 gap-y-3.5 border-b border-rule py-7 min-[861px]:grid-cols-[minmax(0,15rem)_minmax(0,1fr)_minmax(0,13rem)] min-[861px]:py-8">
+            <div><h3 class="text-[1.4rem] font-bold leading-tight">ACT Cabs</h3><p class="mt-1.5 text-[0.95rem] text-muted">Driver portal, WordPress and PHP</p></div>
+            <div class="grid content-start gap-3.5"><p class="max-w-[40rem]">Improved the driver account portal with custom PHP modules inside WordPress, so drivers can see earnings reports, upload documents and get dispatch data as it changes.</p><ul class="flex flex-wrap gap-1.5" aria-label="Built with"><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">WordPress</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">Custom PHP</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">MySQL</li></ul></div>
+            <ul class="grid content-start gap-1"><li><a class="inline-flex min-h-11 items-center gap-1.5 font-semibold text-teal underline decoration-1 underline-offset-[0.18em] hover:text-teal-hover hover:decoration-2" href="https://portalactcabs.com.au" target="_blank" rel="noopener">Driver portal<svg class="h-3.5 w-3.5 flex-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="sr-only"> (opens in a new tab)</span></a></li><li><a class="inline-flex min-h-11 items-center gap-1.5 font-semibold text-teal underline decoration-1 underline-offset-[0.18em] hover:text-teal-hover hover:decoration-2" href="https://actcabs.com.au" target="_blank" rel="noopener">Main website<svg class="h-3.5 w-3.5 flex-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="sr-only"> (opens in a new tab)</span></a></li></ul>
           </li>
-
-          <li class="project">
-            <div class="project-name"><h3>University of Auckland</h3><p class="project-kind">Open Week registration page</p></div>
-            <div class="project-body">
-              <p>A registration landing page for International Open Week with instant form checks in the browser. Each registration goes through the Eloqua API to the right list.</p>
-              <ul class="tools" aria-label="Built with"><li>Eloqua API</li><li>JavaScript</li><li>Lead routing</li></ul>
-            </div>
-            <ul class="project-links">
-              <li><a href="https://www.internationalopenweek.ac.nz/en/registration" target="_blank" rel="noopener">Registration page<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="visually-hidden">(opens in a new tab)</span></a></li>
-            </ul>
+          <li class="grid gap-x-10 gap-y-3.5 border-b border-rule py-7 min-[861px]:grid-cols-[minmax(0,15rem)_minmax(0,1fr)_minmax(0,13rem)] min-[861px]:py-8">
+            <div><h3 class="text-[1.4rem] font-bold leading-tight">University of Auckland</h3><p class="mt-1.5 text-[0.95rem] text-muted">Open Week registration page</p></div>
+            <div class="grid content-start gap-3.5"><p class="max-w-[40rem]">A registration landing page for International Open Week with instant form checks in the browser. Each registration goes through the Eloqua API to the right list.</p><ul class="flex flex-wrap gap-1.5" aria-label="Built with"><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">Eloqua API</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">JavaScript</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">Lead routing</li></ul></div>
+            <ul class="grid content-start gap-1"><li><a class="inline-flex min-h-11 items-center gap-1.5 font-semibold text-teal underline decoration-1 underline-offset-[0.18em] hover:text-teal-hover hover:decoration-2" href="https://www.internationalopenweek.ac.nz/en/registration" target="_blank" rel="noopener">Registration page<svg class="h-3.5 w-3.5 flex-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="sr-only"> (opens in a new tab)</span></a></li></ul>
           </li>
-
-          <li class="project">
-            <div class="project-name"><h3>Victoria University</h3><p class="project-kind">Course call-back page, Yii PHP</p></div>
-            <div class="project-body">
-              <p>A call-back request page for the Graduate Certificate in Planetary Health. It reads UTM parameters, records which campaign each enquiry came from, and books the call through the university's routing webhooks.</p>
-              <ul class="tools" aria-label="Built with"><li>Yii PHP</li><li>Webhooks</li><li>UTM tracking</li></ul>
-            </div>
-            <ul class="project-links">
-              <li><a href="https://study.vu.edu.au/requestcallback?course=VTPH" target="_blank" rel="noopener">Call-back page<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="visually-hidden">(opens in a new tab)</span></a></li>
-            </ul>
+          <li class="grid gap-x-10 gap-y-3.5 border-b border-rule py-7 min-[861px]:grid-cols-[minmax(0,15rem)_minmax(0,1fr)_minmax(0,13rem)] min-[861px]:py-8">
+            <div><h3 class="text-[1.4rem] font-bold leading-tight">Victoria University</h3><p class="mt-1.5 text-[0.95rem] text-muted">Course call-back page, Yii PHP</p></div>
+            <div class="grid content-start gap-3.5"><p class="max-w-[40rem]">A call-back request page for the Graduate Certificate in Planetary Health. It reads UTM parameters, records which campaign each enquiry came from, and books the call through the university's routing webhooks.</p><ul class="flex flex-wrap gap-1.5" aria-label="Built with"><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">Yii PHP</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">Webhooks</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">UTM tracking</li></ul></div>
+            <ul class="grid content-start gap-1"><li><a class="inline-flex min-h-11 items-center gap-1.5 font-semibold text-teal underline decoration-1 underline-offset-[0.18em] hover:text-teal-hover hover:decoration-2" href="https://study.vu.edu.au/requestcallback?course=VTPH" target="_blank" rel="noopener">Call-back page<svg class="h-3.5 w-3.5 flex-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="sr-only"> (opens in a new tab)</span></a></li></ul>
           </li>
-
-          <li class="project">
-            <div class="project-name"><h3>NIMS and AIM Institute</h3><p class="project-kind">Education websites and LMS</p></div>
-            <div class="project-body">
-              <p>Faster student registration and smoother LMS operations, with the registration forms on the website connected to the student information databases behind them.</p>
-              <ul class="tools" aria-label="Built with"><li>WordPress</li><li>Databases</li><li>Performance</li></ul>
-            </div>
-            <ul class="project-links">
-              <li><a href="https://nimsinstitute.edu.au" target="_blank" rel="noopener">NIMS Institute<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="visually-hidden">(opens in a new tab)</span></a></li>
-              <li><a href="https://aiminstitute.edu.au" target="_blank" rel="noopener">AIM Institute<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="visually-hidden">(opens in a new tab)</span></a></li>
-            </ul>
+          <li class="grid gap-x-10 gap-y-3.5 border-b border-rule py-7 min-[861px]:grid-cols-[minmax(0,15rem)_minmax(0,1fr)_minmax(0,13rem)] min-[861px]:py-8">
+            <div><h3 class="text-[1.4rem] font-bold leading-tight">NIMS and AIM Institute</h3><p class="mt-1.5 text-[0.95rem] text-muted">Education websites and LMS</p></div>
+            <div class="grid content-start gap-3.5"><p class="max-w-[40rem]">Faster student registration and smoother LMS operations, with the registration forms on the website connected to the student information databases behind them.</p><ul class="flex flex-wrap gap-1.5" aria-label="Built with"><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">WordPress</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">Databases</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">Performance</li></ul></div>
+            <ul class="grid content-start gap-1"><li><a class="inline-flex min-h-11 items-center gap-1.5 font-semibold text-teal underline decoration-1 underline-offset-[0.18em] hover:text-teal-hover hover:decoration-2" href="https://nimsinstitute.edu.au" target="_blank" rel="noopener">NIMS Institute<svg class="h-3.5 w-3.5 flex-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="sr-only"> (opens in a new tab)</span></a></li><li><a class="inline-flex min-h-11 items-center gap-1.5 font-semibold text-teal underline decoration-1 underline-offset-[0.18em] hover:text-teal-hover hover:decoration-2" href="https://aiminstitute.edu.au" target="_blank" rel="noopener">AIM Institute<svg class="h-3.5 w-3.5 flex-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="sr-only"> (opens in a new tab)</span></a></li></ul>
           </li>
-
-          <li class="project">
-            <div class="project-name"><h3>Australian National Character Check</h3><p class="project-kind">Background check platform</p></div>
-            <div class="project-body">
-              <p>Maintained front-end features, kept an eye on the compliance integrations, and made the check-ordering flow easier to follow on a platform where security matters.</p>
-              <ul class="tools" aria-label="Built with"><li>HTML and CSS</li><li>Front end</li><li>Performance</li></ul>
-            </div>
-            <ul class="project-links">
-              <li><a href="https://www.australiannationalcharactercheck.com.au" target="_blank" rel="noopener">ANCC website<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="visually-hidden">(opens in a new tab)</span></a></li>
-            </ul>
+          <li class="grid gap-x-10 gap-y-3.5 border-b border-rule py-7 min-[861px]:grid-cols-[minmax(0,15rem)_minmax(0,1fr)_minmax(0,13rem)] min-[861px]:py-8">
+            <div><h3 class="text-[1.4rem] font-bold leading-tight">Australian National Character Check</h3><p class="mt-1.5 text-[0.95rem] text-muted">Background check platform</p></div>
+            <div class="grid content-start gap-3.5"><p class="max-w-[40rem]">Maintained front-end features, kept an eye on the compliance integrations, and made the check-ordering flow easier to follow on a platform where security matters.</p><ul class="flex flex-wrap gap-1.5" aria-label="Built with"><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">HTML and CSS</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">Front end</li><li class="rounded-full border border-rule px-2.5 py-1 text-[0.88rem]">Performance</li></ul></div>
+            <ul class="grid content-start gap-1"><li><a class="inline-flex min-h-11 items-center gap-1.5 font-semibold text-teal underline decoration-1 underline-offset-[0.18em] hover:text-teal-hover hover:decoration-2" href="https://www.australiannationalcharactercheck.com.au" target="_blank" rel="noopener">ANCC website<svg class="h-3.5 w-3.5 flex-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="sr-only"> (opens in a new tab)</span></a></li></ul>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="section alt" id="experience" aria-labelledby="experience-title">
-      <div class="wrap">
-        <div class="section-head"><h2 id="experience-title">Experience</h2></div>
-        <ol class="timeline" reversed>
-          <li class="role">
-            <div class="role-dates">Aug 2024 to Mar 2026</div>
+    <section class="border-t border-rule bg-sunken py-[clamp(4rem,9vw,7rem)]" id="experience" aria-labelledby="experience-title">
+      <div class="mx-auto w-full max-w-wrap px-[clamp(1rem,4vw,2.5rem)]">
+        <div class="mb-[clamp(2.25rem,5vw,3.5rem)] grid max-w-[46rem] gap-4"><h2 id="experience-title" class="text-[clamp(2rem,4.2vw,3rem)] font-bold leading-[1.1] tracking-[-0.03em]">Experience</h2></div>
+        <ol class="grid max-w-[52rem]" reversed>
+          <li class="grid gap-x-10 gap-y-2 border-t border-rule py-7 min-[641px]:grid-cols-[11rem_minmax(0,1fr)]">
+            <div class="pt-0.5 tabular-nums text-muted">Aug 2024 to Mar 2026</div>
             <div>
-              <h3>Developer Programmer</h3>
-              <p class="role-org">Ameya Informatics</p>
+              <h3 class="text-[1.3rem] font-bold leading-tight">Developer Programmer</h3>
+              <p class="mb-3 mt-1 text-muted">Ameya Informatics</p>
               <p>Built full-stack web applications, looked after Yii and WordPress portals, and ran the REST API syncs that move student records between university databases and enterprise CRMs.</p>
             </div>
           </li>
-          <li class="role">
-            <div class="role-dates">2022 to 2023</div>
+          <li class="grid gap-x-10 gap-y-2 border-y border-rule py-7 min-[641px]:grid-cols-[11rem_minmax(0,1fr)]">
+            <div class="pt-0.5 tabular-nums text-muted">2022 to 2023</div>
             <div>
-              <h3>MarTech Web Developer</h3>
-              <p class="role-org">Marketing Cube</p>
+              <h3 class="text-[1.3rem] font-bold leading-tight">MarTech Web Developer</h3>
+              <p class="mb-3 mt-1 text-muted">Marketing Cube</p>
               <p>Built responsive landing pages and email templates in Oracle Eloqua, set up data-driven dynamic content, and kept web assets in step with CRM pipelines.</p>
             </div>
           </li>
@@ -256,26 +229,26 @@
       </div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="wrap">
-        <h2 id="contact-title">Got a campaign that needs building?</h2>
-        <p>Tell me about the emails, pages or integrations you need, and I'll get back to you.</p>
-        <div class="contact-row">
-          <a class="contact-email" href="mailto:sumitshinde559@gmail.com">sumitshinde559@gmail.com</a>
-          <button class="btn btn-ghost" type="button" id="copy-btn">Copy email</button>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/sumitshinde/" target="_blank" rel="noopener">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+    <section class="border-t border-rule py-[clamp(4rem,10vw,8rem)]" id="contact" aria-labelledby="contact-title">
+      <div class="mx-auto w-full max-w-wrap px-[clamp(1rem,4vw,2.5rem)]">
+        <h2 id="contact-title" class="max-w-[16ch] text-[clamp(2.3rem,5.6vw,4.4rem)] font-bold leading-[1.1] tracking-[-0.035em]">Got a campaign that needs building?</h2>
+        <p class="mt-5 max-w-[34rem] text-[1.15rem] text-muted">Tell me about the emails, pages or integrations you need, and I'll get back to you.</p>
+        <div class="mt-9 flex flex-wrap items-center gap-x-4 gap-y-3">
+          <a class="border-b-[3px] border-mint text-[clamp(1.25rem,3.2vw,2rem)] font-bold tracking-[-0.02em] text-ink no-underline [overflow-wrap:anywhere] hover:border-teal hover:text-teal" href="mailto:sumitshinde559@gmail.com">sumitshinde559@gmail.com</a>
+          <button class="inline-flex min-h-12 items-center justify-center rounded-full border-[1.5px] border-ink px-[1.4rem] py-3 text-base font-semibold leading-none text-ink transition-colors hover:bg-ink hover:text-paper" type="button" id="copy-btn">Copy email</button>
+          <a class="inline-flex min-h-12 items-center justify-center rounded-full border-[1.5px] border-ink px-[1.4rem] py-3 text-base font-semibold leading-none text-ink no-underline transition-colors hover:bg-ink hover:text-paper" href="https://www.linkedin.com/in/sumitshinde/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
         </div>
-        <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+        <p class="mt-3 min-h-[1.5em] text-[0.95rem] text-muted" id="copy-status" role="status" aria-live="polite"></p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap footer-row">
+  <footer class="border-t border-rule py-8 text-[0.95rem] text-muted">
+    <div class="mx-auto flex w-full max-w-wrap flex-wrap items-center justify-between gap-x-8 gap-y-3 px-[clamp(1rem,4vw,2.5rem)]">
       <span>&copy; 2026 Sumit Shinde</span>
-      <nav aria-label="Footer">
-        <a href="https://www.linkedin.com/in/sumitshinde/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#top">Back to top</a>
+      <nav class="flex gap-6" aria-label="Footer">
+        <a class="inline-block py-2.5 text-muted underline underline-offset-[0.18em] hover:text-ink" href="https://www.linkedin.com/in/sumitshinde/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="inline-block py-2.5 text-muted underline underline-offset-[0.18em] hover:text-ink" href="#top">Back to top</a>
       </nav>
     </div>
   </footer>

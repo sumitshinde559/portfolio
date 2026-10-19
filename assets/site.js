@@ -56,7 +56,11 @@
   var typing = null;
 
   function fitInput() {
-    sizer.className = 'merge-sizer' + (input.classList.contains('is-token') ? ' merge-input is-token' : '');
+    // The hidden sizer copies the field's type so the field can be sized to its text.
+    sizer.className = 'merge-sizer invisible absolute left-0 top-0 whitespace-pre px-[0.16em] ' +
+      (input.classList.contains('is-token')
+        ? 'font-mono text-[length:0.78em] font-medium tracking-[-0.06em]'
+        : 'font-sans text-[length:1em] font-bold tracking-[inherit]');
     sizer.textContent = input.value || input.placeholder || ' ';
     input.style.width = (sizer.getBoundingClientRect().width + 2) + 'px';
   }
