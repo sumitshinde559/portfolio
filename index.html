@@ -62,7 +62,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap">
         <h1 id="hero-title">Hi <span class="merge"><input class="merge-input is-token" id="name" type="text" value="{{FirstName}}" maxlength="18" autocomplete="given-name" spellcheck="false" aria-label="Your first name. It fills in the emails further down the page."><span class="merge-sizer" aria-hidden="true"></span></span>, I build the emails, landing pages and CRM syncs behind marketing campaigns.</h1>
-        <p class="hero-hint"><code>{{FirstName}}</code> <span>is a merge field. Type your name into the yellow box and the campaign emails below will greet you by it.</span></p>
+        <p class="hero-hint"><code>{{FirstName}}</code> <span>is a merge field. Type your name into the highlighted box and the campaign emails below will greet you by it.</span></p>
 
         <div class="hero-body">
           <p>I'm Sumit Shinde, a MarTech developer who sits between engineering and marketing. I code responsive emails and landing pages in Oracle Eloqua, build PHP and WordPress sites, and connect forms to CRMs so every enquiry reaches the right team.</p>
@@ -155,7 +155,7 @@
               </div>
             </div>
             <div class="stage" id="stage">
-              <iframe id="email-frame" title="Email preview" sandbox="allow-popups allow-popups-to-escape-sandbox"></iframe>
+              <iframe id="email-frame" title="Email preview" sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox" scrolling="no"></iframe>
             </div>
           </div>
         </div>

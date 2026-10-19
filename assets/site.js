@@ -171,6 +171,27 @@
     }
   }
 
+  // Size the preview to the email's full height, so phones scroll the page, not a box inside it.
+  function fitFrame() {
+    try {
+      var doc = frame.contentDocument;
+      if (!doc || !doc.documentElement) return;
+      frame.style.height = '0px';
+      var h = Math.max(doc.documentElement.scrollHeight, doc.body ? doc.body.scrollHeight : 0);
+      frame.style.height = Math.max(h, 420) + 'px';
+    } catch (e) { frame.style.height = ''; }
+  }
+  frame.addEventListener('load', function () {
+    fitFrame();
+    try {
+      Array.prototype.forEach.call(frame.contentDocument.images, function (img) {
+        if (!img.complete) { img.addEventListener('load', fitFrame); img.addEventListener('error', fitFrame); }
+      });
+    } catch (e) {}
+  });
+  var fitTimer;
+  window.addEventListener('resize', function () { clearTimeout(fitTimer); fitTimer = setTimeout(fitFrame, 120); });
+
   function renderNotes() {
     notes.innerHTML = emails[active].notes.map(function (n) {
       return '<div><dt>' + esc(n[0]) + '</dt><dd>' + esc(n[1]) + '</dd></div>';
@@ -206,6 +227,7 @@
     b.addEventListener('click', function () {
       deviceBtns.forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); });
       stage.classList.toggle('is-phone', b.dataset.device === 'phone');
+      setTimeout(fitFrame, 380);
     });
   });
 
