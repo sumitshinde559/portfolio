@@ -4,9 +4,9 @@
 
 @layer base {
   @font-face {
-    font-family: "Schibsted Grotesk";
-    src: url("fonts/schibsted-grotesk-latin-wght-normal.woff2") format("woff2");
-    font-weight: 400 900;
+    font-family: "Onest";
+    src: url("fonts/onest-latin-wght-normal.woff2") format("woff2");
+    font-weight: 100 900;
     font-display: swap;
   }
   @font-face {
@@ -15,25 +15,8 @@
     font-weight: 500;
     font-display: swap;
   }
-  /* Colour tokens (space-separated RGB so Tailwind opacity modifiers work) */
-  :root {
-    --paper: 255 255 255; --surface: 255 255 255; --sunken: 243 247 247;
-    --ink: 14 30 37; --muted: 74 91 98; --rule: 213 225 226;
-    --teal: 11 117 118; --teal-hover: 8 92 93; --on-teal: 255 255 255;
-    --mint: 184 242 230; --tint: 230 246 243;
-    color-scheme: light;
-  }
-  [data-theme-resolved="dark"] {
-    --paper: 14 30 37; --surface: 21 41 47; --sunken: 10 23 28;
-    --ink: 230 240 240; --muted: 159 179 182; --rule: 38 64 74;
-    --teal: 79 209 197; --teal-hover: 142 229 220; --on-teal: 6 32 35;
-    --tint: 18 49 56;
-    color-scheme: dark;
-  }
-}
-
-@layer base {
-  :focus-visible { outline: 3px solid rgb(var(--teal)); outline-offset: 3px; border-radius: 4px; }
-  ::selection { background: rgb(var(--mint)); color: #0e1e25; }
+  :root { color-scheme: dark; }
+  :focus-visible { outline: 2px solid #ff5a3c; outline-offset: 3px; border-radius: 4px; }
+  ::selection { background: #e0231c; color: #fff; }
   h1, h2, h3 { text-wrap: balance; }
 }

@@ -4,30 +4,6 @@
   var root = document.documentElement;
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- Theme ---------- */
-  var themeBtn = document.getElementById('theme-btn');
-  var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-  function storedTheme() {
-    try { return localStorage.getItem('ss-theme'); } catch (e) { return null; }
-  }
-  function applyTheme() {
-    var t = storedTheme();
-    var dark = t ? t === 'dark' : darkQuery.matches;
-    root.setAttribute('data-theme-resolved', dark ? 'dark' : 'light');
-    if (themeBtn) themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-  }
-  if (themeBtn) {
-    themeBtn.addEventListener('click', function () {
-      var next = root.getAttribute('data-theme-resolved') === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      try { localStorage.setItem('ss-theme', next); } catch (e) {}
-      applyTheme();
-    });
-  }
-  if (darkQuery.addEventListener) darkQuery.addEventListener('change', applyTheme);
-  applyTheme();
-
   /* ---------- Header ---------- */
   var header = document.querySelector('.site-header');
   var nav = document.getElementById('nav');
@@ -59,8 +35,8 @@
     // The hidden sizer copies the field's type so the field can be sized to its text.
     sizer.className = 'merge-sizer invisible absolute left-0 top-0 whitespace-pre px-[0.16em] ' +
       (input.classList.contains('is-token')
-        ? 'font-mono text-[length:0.78em] font-medium tracking-[-0.06em]'
-        : 'font-sans text-[length:1em] font-bold tracking-[inherit]');
+        ? 'font-mono text-[length:0.66em] tracking-[-0.06em]'
+        : 'font-sans text-[length:1em] font-normal uppercase tracking-[inherit]');
     sizer.textContent = input.value || input.placeholder || ' ';
     input.style.width = (sizer.getBoundingClientRect().width + 2) + 'px';
   }
@@ -245,6 +221,18 @@
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(addr).then(done, fail);
     else fail();
   });
+
+  /* ---------- Tilt cards (mouse only) ---------- */
+  if (!reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-tilt]'), function (card) {
+      card.addEventListener('pointermove', function (e) {
+        var r = card.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = 'perspective(900px) rotateX(' + (-y * 8).toFixed(2) + 'deg) rotateY(' + (x * 10).toFixed(2) + 'deg) translateZ(6px)';
+      });
+      card.addEventListener('pointerleave', function () { card.style.transform = ''; });
+    });
+  }
 
   /* ---------- Start ---------- */
   fitInput();
